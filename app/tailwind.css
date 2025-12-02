@@ -1,13 +1,62 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@layer base {
-  html, body {
-    @apply bg-tech-bg text-white font-sans antialiased;
+@theme {
+  --color-primary-50: #f5f3ff;
+  --color-primary-100: #ede9fe;
+  --color-primary-500: #9370db;
+  --color-primary-600: #ba55d3;
+  --color-primary-700: #8b5cf6;
+
+  --color-tech-bg: #0a0a0f;
+  --color-tech-panel: #1a1a24;
+  --color-tech-border: #9370db80;
+
+  --font-mono: "JetBrains Mono", monospace;
+  --font-sans: "Inter", system-ui, sans-serif;
+
+  --animate-fade-in: fadeIn 0.5s ease-in;
+  --animate-slide-up: slideUp 0.6s ease-out;
+  --animate-glow: glow 2s ease-in-out infinite;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    0% {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes glow {
+
+    0%,
+    100% {
+      box-shadow: 0 0 20px rgba(147, 112, 219, 0.4);
+    }
+
+    50% {
+      box-shadow: 0 0 40px rgba(147, 112, 219, 0.8);
+    }
   }
 }
 
-/* Import JetBrains Mono */
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@layer base {
+
+  html,
+  body {
+    @apply bg-tech-bg text-white font-sans antialiased;
+  }
+}
