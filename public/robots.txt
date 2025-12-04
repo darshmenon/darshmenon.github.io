@@ -5,7 +5,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://darshmenon.github.io/DarshPortfolio/sitemap.xml
+Sitemap: https://darshmenon.github.io/sitemap.xml
 
 # Allow all major search engine crawlers
 User-agent: Googlebot

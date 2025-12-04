@@ -26,8 +26,8 @@ export const links: LinksFunction = () => [
     rel: "stylesheet",
     href: "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap",
   },
-  { rel: "icon", href: "/DarshPortfolio/favicon.png", type: "image/png" },
-  { rel: "canonical", href: "https://darshmenon.github.io/DarshPortfolio/" },
+  { rel: "icon", href: "/favicon.png", type: "image/png" },
+  { rel: "canonical", href: "https://darshmenon.github.io/" },
 ];
 
 export const meta: MetaFunction = () => [
@@ -73,11 +73,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
             Contact: darshmenon02@gmail.com | Kochi, Kerala, India
           </p>
           <nav>
-            <a href="/DarshPortfolio/">Home</a>
-            <a href="/DarshPortfolio/about">About</a>
-            <a href="/DarshPortfolio/projects">Projects</a>
-            <a href="/DarshPortfolio/contact">Contact</a>
-            <a href="/DarshPortfolio/robocloud-hub">RoboCloud Hub</a>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/projects">Projects</a>
+            <a href="/contact">Contact</a>
+            <a href="/robocloud-hub">RoboCloud Hub</a>
           </nav>
         </div>
 

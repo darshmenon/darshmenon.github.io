@@ -14,7 +14,7 @@ export const meta: MetaFunction = () => {
         { property: "og:title", content: "Projects | Darsh Menon | Robotics Engineer" },
         { property: "og:description", content: "Explore robotics projects including RoboCloud Hub, RL Bipedal Walking, and autonomous navigation systems." },
         { property: "og:type", content: "website" },
-        { property: "og:url", content: "https://darshmenon.github.io/DarshPortfolio/projects" },
+        { property: "og:url", content: "https://darshmenon.github.io/projects" },
         // Twitter Card
         { name: "twitter:card", content: "summary" },
         { name: "twitter:title", content: "Projects | Darsh Menon | Robotics Engineer" },

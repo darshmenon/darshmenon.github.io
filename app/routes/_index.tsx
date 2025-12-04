@@ -19,7 +19,7 @@ export const meta: MetaFunction = () => {
         { property: "og:title", content: "Darsh Menon | Robotics Software Engineer" },
         { property: "og:description", content: "Robotics Software Engineer at Asimov Robotics. Specializing in ROS 2, Computer Vision, and Autonomous Navigation. BITS Pilani graduate." },
         { property: "og:type", content: "website" },
-        { property: "og:url", content: "https://darshmenon.github.io/DarshPortfolio/" },
+        { property: "og:url", content: "https://darshmenon.github.io/" },
         { property: "og:site_name", content: "Darsh Menon Portfolio" },
         { property: "og:locale", content: "en_US" },
         // Twitter Card
@@ -29,7 +29,7 @@ export const meta: MetaFunction = () => {
         { name: "twitter:title", content: "Darsh Menon | Robotics Software Engineer" },
         { name: "twitter:description", content: "Robotics Software Engineer at Asimov Robotics. Specializing in ROS 2, Computer Vision, and Autonomous Navigation." },
         // Canonical
-        { tagName: "link", rel: "canonical", href: "https://darshmenon.github.io/DarshPortfolio/" },
+        { tagName: "link", rel: "canonical", href: "https://darshmenon.github.io/" },
     ];
 };
 
@@ -44,7 +44,7 @@ export default function Index() {
                         "@context": "https://schema.org",
                         "@type": "Person",
                         "name": "Darsh Menon",
-                        "url": "https://darshmenon.github.io/DarshPortfolio/",
+                        "url": "https://darshmenon.github.io/",
                         "jobTitle": "Robotics Software Engineer",
                         "worksFor": {
                             "@type": "Organization",

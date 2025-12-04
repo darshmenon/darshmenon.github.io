@@ -13,7 +13,7 @@ export const meta: MetaFunction = () => {
         { property: "og:title", content: "RoboCloud Hub | Robotics Learning Platform" },
         { property: "og:description", content: "A comprehensive robotics ecosystem platform featuring learning paths, community forums, job board, and marketplace." },
         { property: "og:type", content: "website" },
-        { property: "og:url", content: "https://darshmenon.github.io/DarshPortfolio/robocloud-hub" },
+        { property: "og:url", content: "https://darshmenon.github.io/robocloud-hub" },
         // Twitter Card
         { name: "twitter:card", content: "summary" },
         { name: "twitter:title", content: "RoboCloud Hub | Robotics Learning Platform" },

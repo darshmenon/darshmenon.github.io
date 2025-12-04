@@ -72,18 +72,17 @@ export function Hero() {
                     <p className="text-sm text-gray-500 font-mono mb-6 uppercase tracking-widest">Core Technologies</p>
                     <div className="flex flex-wrap justify-center gap-6 md:gap-12">
                         {[
-                            { name: 'ROS 2', icon: '🤖' },
-                            { name: 'Python', icon: '🐍' },
-                            { name: 'C++', icon: '⚡' },
-                            { name: 'OpenCV', icon: '👁️' },
-                            { name: 'PyTorch', icon: '🔥' },
-                            { name: 'Gazebo', icon: '🎮' },
-                            { name: 'Docker', icon: '🐳' },
-                            { name: 'Linux', icon: '🐧' }
+                            'ROS 2',
+                            'Python',
+                            'C++',
+                            'OpenCV',
+                            'PyTorch',
+                            'Gazebo',
+                            'Docker',
+                            'Linux'
                         ].map((tech) => (
-                            <span key={tech.name} className="text-lg font-medium text-gray-300 hover:text-primary-400 transition-colors flex items-center gap-2">
-                                <span className="text-xl">{tech.icon}</span>
-                                {tech.name}
+                            <span key={tech} className="text-lg font-medium text-gray-300 hover:text-primary-400 transition-colors">
+                                {tech}
                             </span>
                         ))}
                     </div>

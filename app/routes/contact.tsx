@@ -13,7 +13,7 @@ export const meta: MetaFunction = () => {
         { property: "og:title", content: "Contact Darsh Menon | Robotics Software Engineer" },
         { property: "og:description", content: "Get in touch for robotics collaborations, ROS 2 consulting, or project discussions." },
         { property: "og:type", content: "website" },
-        { property: "og:url", content: "https://darshmenon.github.io/DarshPortfolio/contact" },
+        { property: "og:url", content: "https://darshmenon.github.io/contact" },
         // Twitter Card
         { name: "twitter:card", content: "summary" },
         { name: "twitter:title", content: "Contact Darsh Menon | Robotics Software Engineer" },

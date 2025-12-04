@@ -13,7 +13,7 @@ export const meta: MetaFunction = () => {
         { property: "og:title", content: "About Darsh Menon | Robotics Software Engineer" },
         { property: "og:description", content: "Robotics Software Engineer at Asimov Robotics specializing in ROS 2, Computer Vision, and Autonomous Navigation. BITS Pilani graduate." },
         { property: "og:type", content: "profile" },
-        { property: "og:url", content: "https://darshmenon.github.io/DarshPortfolio/about" },
+        { property: "og:url", content: "https://darshmenon.github.io/about" },
         // Twitter Card
         { name: "twitter:card", content: "summary" },
         { name: "twitter:title", content: "About Darsh Menon | Robotics Software Engineer" },
@@ -120,7 +120,7 @@ export default function About() {
                             "@type": "CollegeOrUniversity",
                             "name": "Birla Institute of Technology and Science, Pilani"
                         },
-                        "url": "https://darshmenon.github.io/DarshPortfolio/",
+                        "url": "https://darshmenon.github.io/",
                         "sameAs": [
                             "https://github.com/darshmenon",
                             "https://linkedin.com/in/darsh-menon",

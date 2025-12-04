@@ -7,7 +7,6 @@ const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Projects', href: '/projects' },
-    { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' },
     { name: 'RoboCloud', href: '/robocloud-hub' },
 ];
@@ -47,12 +46,6 @@ export function Navbar() {
                             {link.name}
                         </Link>
                     ))}
-                    <Link
-                        to="/contact"
-                        className="px-5 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-full text-sm font-medium transition-all transform hover:scale-105"
-                    >
-                        Hire Me
-                    </Link>
                 </div>
 
                 {/* Mobile Menu Button */}
@@ -84,13 +77,6 @@ export function Navbar() {
                             {link.name}
                         </Link>
                     ))}
-                    <Link
-                        to="/contact"
-                        onClick={() => setMobileMenuOpen(false)}
-                        className="px-5 py-3 bg-primary-600 text-center text-white rounded-lg text-lg font-medium"
-                    >
-                        Hire Me
-                    </Link>
                 </div>
             )}
         </nav>
