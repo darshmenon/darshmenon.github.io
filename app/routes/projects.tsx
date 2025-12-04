@@ -4,23 +4,63 @@ import { projects } from "~/data/projects";
 
 export const meta: MetaFunction = () => {
     return [
-        { title: "Projects - Darsh Menon | Robotics Engineer" },
+        { title: "Projects | Darsh Menon | ROS 2 Robotics & Autonomous Systems Portfolio" },
         {
             name: "description",
-            content: "Featured robotics projects including RL bipedal walking, mobile manipulation, and navigation systems."
+            content: "Explore Darsh Menon's robotics projects including RoboCloud Hub, RL Bipedal Walking Robot, Mobile Pick-and-Place systems, and autonomous navigation solutions using ROS 2, Python, and Computer Vision."
         },
+        { name: "keywords", content: "Darsh Menon Projects, ROS 2 Projects, Robotics Portfolio, Autonomous Navigation, Reinforcement Learning Robot, Computer Vision Projects, Python Robotics, BITS Pilani" },
+        // Open Graph
+        { property: "og:title", content: "Projects | Darsh Menon | Robotics Engineer" },
+        { property: "og:description", content: "Explore robotics projects including RoboCloud Hub, RL Bipedal Walking, and autonomous navigation systems." },
+        { property: "og:type", content: "website" },
+        { property: "og:url", content: "https://darshmenon.github.io/DarshPortfolio/projects" },
+        // Twitter Card
+        { name: "twitter:card", content: "summary" },
+        { name: "twitter:title", content: "Projects | Darsh Menon | Robotics Engineer" },
+        { name: "twitter:description", content: "Explore robotics projects including RoboCloud Hub, RL Bipedal Walking, and autonomous navigation systems." },
     ];
 };
 
 export default function Projects() {
     return (
         <div className="container mx-auto px-6 py-12 space-y-12">
+            {/* JSON-LD Structured Data */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "CollectionPage",
+                        "name": "Darsh Menon's Robotics Projects",
+                        "description": "A collection of robotics and autonomous systems projects",
+                        "author": {
+                            "@type": "Person",
+                            "name": "Darsh Menon"
+                        },
+                        "mainEntity": {
+                            "@type": "ItemList",
+                            "itemListElement": projects.map((project, index) => ({
+                                "@type": "SoftwareSourceCode",
+                                "position": index + 1,
+                                "name": project.title,
+                                "description": project.description,
+                                "codeRepository": project.github,
+                                "programmingLanguage": project.tags
+                            }))
+                        }
+                    })
+                }}
+            />
+
             <section className="space-y-6">
                 <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary-400 to-primary-600">
                     PROJECTS
                 </h1>
                 <p className="text-xl text-gray-300 max-w-3xl leading-relaxed">
                     A collection of my work in robotics, autonomous systems, and software development.
+                    Each project represents a unique challenge in bringing intelligent machines to life,
+                    from reinforcement learning for bipedal locomotion to full-stack robotics platforms.
                 </p>
             </section>
 

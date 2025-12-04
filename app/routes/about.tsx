@@ -3,87 +3,236 @@ import { UIPanel } from "~/components/ui/UIPanel";
 
 export const meta: MetaFunction = () => {
     return [
-        { title: "About - Darsh Menon | Robotics Engineer" },
+        { title: "About Darsh Menon | Robotics Software Engineer at Asimov Robotics | BITS Pilani" },
         {
             name: "description",
-            content: "Passionate robotics engineer specializing in multi-robot detection and navigation systems using ROS 2 and OpenCV."
+            content: "Darsh Menon is a Robotics Software Engineer at Asimov Robotics specializing in ROS 2, Computer Vision, and Autonomous Navigation. BITS Pilani graduate with experience at Growth Jockey. Building intelligent autonomous systems."
         },
+        { name: "keywords", content: "Darsh Menon, Robotics Engineer, ROS 2, Asimov Robotics, BITS Pilani, Computer Vision, Autonomous Navigation, Python, C++, Gazebo, MoveIt" },
+        // Open Graph
+        { property: "og:title", content: "About Darsh Menon | Robotics Software Engineer" },
+        { property: "og:description", content: "Robotics Software Engineer at Asimov Robotics specializing in ROS 2, Computer Vision, and Autonomous Navigation. BITS Pilani graduate." },
+        { property: "og:type", content: "profile" },
+        { property: "og:url", content: "https://darshmenon.github.io/DarshPortfolio/about" },
+        // Twitter Card
+        { name: "twitter:card", content: "summary" },
+        { name: "twitter:title", content: "About Darsh Menon | Robotics Software Engineer" },
+        { name: "twitter:description", content: "Robotics Software Engineer at Asimov Robotics specializing in ROS 2, Computer Vision, and Autonomous Navigation." },
     ];
 };
+
+const experiences = [
+    {
+        period: "Feb 2025 - Present",
+        title: "Robotics Software Engineer",
+        company: "Asimov Robotics",
+        location: "Kochi, India",
+        description: [
+            "Developing multi-robot navigation and perception systems for autonomous mobile robots",
+            "Implementing RANSAC-based obstacle detection and path planning algorithms",
+            "Building real-time communication infrastructure using ROS 2 and WebSocket protocols",
+            "Technologies: ROS 2, OpenCV, Python, C++, RANSAC, WebSocket"
+        ]
+    },
+    {
+        period: "Jun 2024 - Oct 2024",
+        title: "Software Development Engineer 1",
+        company: "Growth Jockey",
+        location: "Remote",
+        description: [
+            "Developed full-stack FinTech applications and internal tools",
+            "Built responsive web applications using Remix and TypeScript",
+            "Designed and implemented PostgreSQL database schemas for financial data",
+            "Technologies: Remix, TypeScript, PostgreSQL, React, Node.js"
+        ]
+    },
+    {
+        period: "Jul 2023 - Dec 2023",
+        title: "Software Development Engineer Intern",
+        company: "Growth Jockey",
+        location: "Remote",
+        description: [
+            "Led complete web rebranding initiative across 130+ pages",
+            "Optimized frontend performance and improved page load times",
+            "Collaborated with design team to implement modern UI/UX patterns",
+            "Technologies: React, TypeScript, CSS, Figma"
+        ]
+    },
+    {
+        period: "Jun 2022 - Aug 2022",
+        title: "Business Development Intern",
+        company: "Shriram Automall",
+        location: "India",
+        description: [
+            "Conducted market analysis for e-commerce expansion strategy",
+            "Developed customer acquisition strategies and sales pipelines",
+            "Created business intelligence reports for stakeholder presentations"
+        ]
+    }
+];
+
+const education = [
+    {
+        degree: "Bachelor of Engineering (Honors)",
+        field: "Mechanical Engineering",
+        institution: "Birla Institute of Technology & Science, Pilani",
+        campus: "Goa Campus",
+        year: "2020 - 2024",
+        cgpa: "7.16/10",
+        highlights: [
+            "Relevant Coursework: Robotics, Control Systems, Machine Design, CAD/CAM",
+            "Projects: Autonomous navigation systems, Robotic arm manipulation",
+            "Active member of Robotics Club and technical festivals"
+        ]
+    },
+    {
+        degree: "Higher Secondary Education",
+        field: "Science (PCM)",
+        institution: "FIITJEE",
+        campus: "Kochi, Kerala",
+        year: "2018 - 2020",
+        cgpa: "",
+        highlights: [
+            "JEE Advanced preparation with focus on Physics and Mathematics",
+            "Strong foundation in problem-solving and analytical thinking",
+            "Participated in various science olympiads and competitions"
+        ]
+    }
+];
 
 export default function About() {
     return (
         <div className="container mx-auto px-6 py-12 space-y-20">
+            {/* JSON-LD Structured Data */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Person",
+                        "name": "Darsh Menon",
+                        "jobTitle": "Robotics Software Engineer",
+                        "worksFor": {
+                            "@type": "Organization",
+                            "name": "Asimov Robotics"
+                        },
+                        "alumniOf": {
+                            "@type": "CollegeOrUniversity",
+                            "name": "Birla Institute of Technology and Science, Pilani"
+                        },
+                        "url": "https://darshmenon.github.io/DarshPortfolio/",
+                        "sameAs": [
+                            "https://github.com/darshmenon",
+                            "https://linkedin.com/in/darsh-menon",
+                            "https://medium.com/@darshmenon02"
+                        ],
+                        "knowsAbout": ["ROS 2", "Computer Vision", "Autonomous Navigation", "Python", "C++", "Machine Learning"]
+                    })
+                }}
+            />
+
             {/* Header Section */}
             <section className="space-y-6">
                 <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary-400 to-primary-600">
                     ABOUT ME
                 </h1>
-                <p className="text-xl text-gray-300 max-w-3xl leading-relaxed">
-                    Passionate robotics engineer specializing in multi-robot detection and navigation systems using ROS 2 and OpenCV.
-                </p>
+                <div className="max-w-4xl space-y-4">
+                    <p className="text-xl text-gray-300 leading-relaxed">
+                        <strong className="text-white">Robotics Software Engineer</strong> at Asimov Robotics, architecting intelligent autonomous systems at the intersection of <span className="text-primary-400">AI, Perception, and Human-Robot Interaction</span>.
+                    </p>
+                    <p className="text-lg text-gray-400 leading-relaxed">
+                        Specializing in <strong className="text-gray-300">ROS 2</strong>, <strong className="text-gray-300">Computer Vision</strong>, and <strong className="text-gray-300">Reinforcement Learning</strong> to bridge the gap between human intent and machine execution. My mission is to democratize humanoid robotics as intelligent companions, leveraging adaptive algorithms to build robots that seamlessly integrate into daily life.
+                    </p>
+                    <p className="text-lg text-gray-400 leading-relaxed">
+                        With a background in Mechanical Engineering from <strong className="text-gray-300">BITS Pilani</strong>, I bring a unique perspective combining hardware understanding with software expertise to create robust robotic solutions.
+                    </p>
+                </div>
             </section>
 
             {/* Experience Section */}
             <section>
-                <h2 className="text-3xl font-bold text-primary-400 mb-12">Experience</h2>
+                <h2 className="text-3xl font-bold text-primary-400 mb-12">Professional Experience</h2>
                 <div className="relative border-l-2 border-primary-500/30 ml-4 md:ml-6 space-y-12">
-                    {/* Experience Item 1 */}
-                    <div className="relative pl-8 md:pl-12">
-                        <div className="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-primary-500 shadow-[0_0_10px_rgba(168,85,247,0.5)]"></div>
-                        <div className="space-y-2">
-                            <div className="text-primary-400 font-mono font-bold">May 2024 - July 2024</div>
-                            <h3 className="text-2xl font-bold text-white">Robotics Research Intern</h3>
-                            <div className="text-xl text-primary-300 font-semibold">TechnoYantra</div>
-                            <p className="text-gray-300 leading-relaxed">
-                                Spearheaded the development of a multi-robot detection and tracking system using ROS 2 and OpenCV.
-                                Implemented a centralized server for real-time data processing and visualization.
-                                Optimized communication protocols for low-latency data transfer between robots and the server.
-                            </p>
+                    {experiences.map((exp, index) => (
+                        <div key={index} className="relative pl-8 md:pl-12">
+                            <div className="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-primary-500 shadow-[0_0_10px_rgba(168,85,247,0.5)]"></div>
+                            <div className="space-y-3">
+                                <div className="text-primary-400 font-mono font-bold text-sm">{exp.period}</div>
+                                <h3 className="text-2xl font-bold text-white">{exp.title}</h3>
+                                <div className="flex flex-wrap items-center gap-2">
+                                    <span className="text-xl text-primary-300 font-semibold">{exp.company}</span>
+                                    <span className="text-gray-500">•</span>
+                                    <span className="text-gray-400">{exp.location}</span>
+                                </div>
+                                <ul className="text-gray-300 leading-relaxed space-y-2">
+                                    {exp.description.map((item, i) => (
+                                        <li key={i} className="flex items-start gap-2">
+                                            <span className="text-primary-500 mt-1.5">▸</span>
+                                            <span>{item}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-
-                    {/* Experience Item 2 */}
-                    <div className="relative pl-8 md:pl-12">
-                        <div className="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-primary-500 shadow-[0_0_10px_rgba(168,85,247,0.5)]"></div>
-                        <div className="space-y-2">
-                            <div className="text-primary-400 font-mono font-bold">Aug 2022 - Present</div>
-                            <h3 className="text-2xl font-bold text-white">Robotics Engineer</h3>
-                            <div className="text-xl text-primary-300 font-semibold">Personal Projects</div>
-                            <p className="text-gray-300 leading-relaxed">
-                                Developed various robotics projects including autonomous navigation, robotic arm manipulation, and swarm robotics.
-                                Utilized ROS 2, Gazebo, and MoveIt 2 for simulation and control.
-                                Integrated computer vision algorithms for object detection and recognition.
-                            </p>
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </section>
 
             {/* Education Section */}
             <section>
                 <h2 className="text-3xl font-bold text-primary-400 mb-12">Education</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <UIPanel className="h-full">
-                        <div className="space-y-4">
-                            <h3 className="text-2xl font-bold text-primary-400">B.E. Electronics and Instrumentation</h3>
-                            <div className="text-xl font-semibold text-white">BITS Pilani, Goa Campus</div>
-                            <div className="text-primary-300 font-mono">2021 - 2025</div>
-                            <p className="text-gray-400">
-                                Relevant Coursework: Control Systems, Microprocessors, Digital Signal Processing, Robotics and Automation.
-                            </p>
-                        </div>
-                    </UIPanel>
+                <div className="grid grid-cols-1 gap-8">
+                    {education.map((edu, index) => (
+                        <UIPanel key={index} className="h-full">
+                            <div className="space-y-4">
+                                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+                                    <div>
+                                        <h3 className="text-2xl font-bold text-primary-400">{edu.degree}</h3>
+                                        <div className="text-xl font-semibold text-white">{edu.field}</div>
+                                    </div>
+                                    <div className="text-right">
+                                        <div className="text-primary-300 font-mono font-bold">{edu.year}</div>
+                                        <div className="text-gray-400">CGPA: {edu.cgpa}</div>
+                                    </div>
+                                </div>
+                                <div className="text-lg text-gray-300">
+                                    {edu.institution}, {edu.campus}
+                                </div>
+                                <ul className="text-gray-400 space-y-1">
+                                    {edu.highlights.map((highlight, i) => (
+                                        <li key={i} className="flex items-start gap-2">
+                                            <span className="text-primary-500 mt-1">•</span>
+                                            <span>{highlight}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </UIPanel>
+                    ))}
+                </div>
+            </section>
 
-                    <UIPanel className="h-full">
-                        <div className="space-y-4">
-                            <h3 className="text-2xl font-bold text-primary-400">High School</h3>
-                            <div className="text-xl font-semibold text-white">Delhi Public School</div>
-                            <div className="text-primary-300 font-mono">2019 - 2021</div>
-                            <p className="text-gray-400">
-                                Focus on Physics, Chemistry, and Mathematics.
-                            </p>
-                        </div>
+            {/* Skills Summary */}
+            <section>
+                <h2 className="text-3xl font-bold text-primary-400 mb-8">Core Competencies</h2>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <UIPanel>
+                        <h3 className="text-lg font-bold text-white mb-4">Robotics & Automation</h3>
+                        <p className="text-gray-400 text-sm leading-relaxed">
+                            Expert in ROS 2 ecosystem, including navigation stack, MoveIt 2 for manipulation, Gazebo simulation, and real-time control systems. Experience with industrial robots (UR3/UR5) and mobile platforms.
+                        </p>
+                    </UIPanel>
+                    <UIPanel>
+                        <h3 className="text-lg font-bold text-white mb-4">Computer Vision & AI</h3>
+                        <p className="text-gray-400 text-sm leading-relaxed">
+                            Proficient in OpenCV, deep learning frameworks (PyTorch, TensorFlow), object detection, RANSAC algorithms, and point cloud processing. Implementing perception pipelines for autonomous systems.
+                        </p>
+                    </UIPanel>
+                    <UIPanel>
+                        <h3 className="text-lg font-bold text-white mb-4">Software Development</h3>
+                        <p className="text-gray-400 text-sm leading-relaxed">
+                            Full-stack development with Python, C++, TypeScript, React, and Node.js. Strong foundation in system design, API development, database management, and DevOps practices.
+                        </p>
                     </UIPanel>
                 </div>
             </section>

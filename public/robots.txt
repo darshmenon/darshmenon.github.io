@@ -1,0 +1,18 @@
+# Darsh Menon Portfolio - Robots.txt
+# https://darshmenon.github.io/DarshPortfolio/
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://darshmenon.github.io/DarshPortfolio/sitemap.xml
+
+# Allow all major search engine crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /

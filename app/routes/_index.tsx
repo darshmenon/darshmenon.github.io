@@ -7,17 +7,81 @@ import { Link } from "react-router";
 
 export const meta: MetaFunction = () => {
     return [
-        { title: "Darsh Menon - ROS 2 Robotics Engineer | Autonomous Systems Developer" },
+        { title: "Darsh Menon | Robotics Software Engineer | ROS 2 Developer | BITS Pilani" },
         {
             name: "description",
-            content: "Darsh Menon - ROS 2 Robotics Engineer specializing in autonomous navigation, computer vision, and intelligent systems. BITS Pilani graduate building the future of robotics."
+            content: "Darsh Menon - Robotics Software Engineer at Asimov Robotics. Specializing in ROS 2, Computer Vision, Autonomous Navigation, and Reinforcement Learning. BITS Pilani graduate building intelligent autonomous systems."
         },
+        { name: "keywords", content: "Darsh Menon, Robotics Engineer, ROS 2, Asimov Robotics, BITS Pilani, Computer Vision, Autonomous Navigation, Python, C++, Gazebo, MoveIt, PyTorch, Machine Learning, India, Kochi" },
+        { name: "author", content: "Darsh Menon" },
+        { name: "robots", content: "index, follow" },
+        // Open Graph
+        { property: "og:title", content: "Darsh Menon | Robotics Software Engineer" },
+        { property: "og:description", content: "Robotics Software Engineer at Asimov Robotics. Specializing in ROS 2, Computer Vision, and Autonomous Navigation. BITS Pilani graduate." },
+        { property: "og:type", content: "website" },
+        { property: "og:url", content: "https://darshmenon.github.io/DarshPortfolio/" },
+        { property: "og:site_name", content: "Darsh Menon Portfolio" },
+        { property: "og:locale", content: "en_US" },
+        // Twitter Card
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:site", content: "@darsh_menon" },
+        { name: "twitter:creator", content: "@darsh_menon" },
+        { name: "twitter:title", content: "Darsh Menon | Robotics Software Engineer" },
+        { name: "twitter:description", content: "Robotics Software Engineer at Asimov Robotics. Specializing in ROS 2, Computer Vision, and Autonomous Navigation." },
+        // Canonical
+        { tagName: "link", rel: "canonical", href: "https://darshmenon.github.io/DarshPortfolio/" },
     ];
 };
 
 export default function Index() {
     return (
         <div className="min-h-screen">
+            {/* JSON-LD Structured Data */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Person",
+                        "name": "Darsh Menon",
+                        "url": "https://darshmenon.github.io/DarshPortfolio/",
+                        "jobTitle": "Robotics Software Engineer",
+                        "worksFor": {
+                            "@type": "Organization",
+                            "name": "Asimov Robotics",
+                            "url": "https://asimovrobotics.com"
+                        },
+                        "alumniOf": {
+                            "@type": "CollegeOrUniversity",
+                            "name": "Birla Institute of Technology and Science, Pilani",
+                            "sameAs": "https://www.bits-pilani.ac.in/"
+                        },
+                        "knowsAbout": [
+                            "ROS 2",
+                            "Robotics",
+                            "Computer Vision",
+                            "Autonomous Navigation",
+                            "Python",
+                            "C++",
+                            "Machine Learning",
+                            "Reinforcement Learning"
+                        ],
+                        "sameAs": [
+                            "https://github.com/darshmenon",
+                            "https://linkedin.com/in/darsh-menon",
+                            "https://medium.com/@darshmenon02",
+                            "https://x.com/darsh_menon"
+                        ],
+                        "address": {
+                            "@type": "PostalAddress",
+                            "addressLocality": "Kochi",
+                            "addressRegion": "Kerala",
+                            "addressCountry": "India"
+                        }
+                    })
+                }}
+            />
+
             <Hero />
 
             <div className="container mx-auto px-6 py-20 space-y-32">

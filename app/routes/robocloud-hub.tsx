@@ -3,60 +3,154 @@ import { UIPanel } from "~/components/ui/UIPanel";
 
 export const meta: MetaFunction = () => {
     return [
-        { title: "RoboCloud Hub - Darsh Menon" },
+        { title: "RoboCloud Hub | Robotics Learning Platform | Darsh Menon" },
         {
             name: "description",
-            content: "RoboCloud Hub - The Future of Robotics Collaboration. A unified platform for jobs, news, and marketplace."
+            content: "RoboCloud Hub - A comprehensive robotics ecosystem platform featuring learning paths, community forums, job board, and marketplace for robotics engineers and enthusiasts. Built by Darsh Menon."
         },
+        { name: "keywords", content: "RoboCloud Hub, Robotics Platform, Robotics Jobs, Robotics Learning, Robotics Community, ROS 2, Autonomous Systems, Darsh Menon" },
+        // Open Graph
+        { property: "og:title", content: "RoboCloud Hub | Robotics Learning Platform" },
+        { property: "og:description", content: "A comprehensive robotics ecosystem platform featuring learning paths, community forums, job board, and marketplace." },
+        { property: "og:type", content: "website" },
+        { property: "og:url", content: "https://darshmenon.github.io/DarshPortfolio/robocloud-hub" },
+        // Twitter Card
+        { name: "twitter:card", content: "summary" },
+        { name: "twitter:title", content: "RoboCloud Hub | Robotics Learning Platform" },
+        { name: "twitter:description", content: "A comprehensive robotics ecosystem platform featuring learning paths, community forums, and job board." },
     ];
 };
+
+const features = [
+    {
+        title: "Learning Paths",
+        description: "Structured courses and tutorials for mastering ROS 2, computer vision, and autonomous navigation. From beginner to advanced levels.",
+        status: "Live",
+        icon: "📚"
+    },
+    {
+        title: "Community Forums",
+        description: "Connect with robotics engineers worldwide. Share projects, ask questions, and collaborate on cutting-edge research.",
+        status: "Live",
+        icon: "💬"
+    },
+    {
+        title: "Job Board",
+        description: "Find the latest opportunities in robotics, automation, and autonomous systems from top companies worldwide.",
+        status: "Coming Soon",
+        icon: "💼"
+    },
+    {
+        title: "News Feed",
+        description: "Stay updated with the latest breakthroughs, research papers, and industry news in the robotics field.",
+        status: "Live",
+        icon: "📰"
+    },
+    {
+        title: "Marketplace",
+        description: "Buy and sell robotics parts, sensors, actuators, and development kits from trusted sellers.",
+        status: "Coming Soon",
+        icon: "🛒"
+    },
+    {
+        title: "Project Showcase",
+        description: "Showcase your robotics projects to the community and get feedback from experienced engineers.",
+        status: "Live",
+        icon: "🚀"
+    }
+];
 
 export default function RoboCloudHub() {
     return (
         <div className="container mx-auto px-6 py-12 space-y-12">
+            {/* JSON-LD Structured Data */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "WebApplication",
+                        "name": "RoboCloud Hub",
+                        "description": "A comprehensive robotics ecosystem platform featuring learning paths, community forums, job board, and marketplace",
+                        "url": "https://robocloud-dashboard.vercel.app/",
+                        "applicationCategory": "EducationalApplication",
+                        "operatingSystem": "Web",
+                        "author": {
+                            "@type": "Person",
+                            "name": "Darsh Menon"
+                        },
+                        "offers": {
+                            "@type": "Offer",
+                            "price": "0",
+                            "priceCurrency": "USD"
+                        }
+                    })
+                }}
+            />
+
             <section className="space-y-6">
-                <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary-400 to-primary-600">
-                    ROBOCLOUD HUB
-                </h1>
+                <div className="flex items-center gap-4">
+                    <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary-400 to-primary-600">
+                        ROBOCLOUD HUB
+                    </h1>
+                    <span className="px-3 py-1 bg-green-500/20 border border-green-500/30 rounded-full text-green-400 text-sm font-medium">
+                        Live
+                    </span>
+                </div>
                 <p className="text-xl text-gray-300 max-w-3xl leading-relaxed">
-                    The Future of Robotics Collaboration. A unified platform for jobs, news, and marketplace.
+                    The Future of Robotics Collaboration. A unified platform for learning, networking, and career growth
+                    in the robotics industry. Built with React, Node.js, and powered by a passionate community.
                 </p>
             </section>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <UIPanel className="h-full">
-                    <h3 className="text-2xl font-bold text-white mb-4">Job Board</h3>
-                    <p className="text-gray-400 mb-6">
-                        Find the latest opportunities in robotics and autonomous systems.
-                    </p>
-                    <div className="text-primary-400 font-mono text-sm">Coming Soon</div>
-                </UIPanel>
-
-                <UIPanel className="h-full">
-                    <h3 className="text-2xl font-bold text-white mb-4">News Feed</h3>
-                    <p className="text-gray-400 mb-6">
-                        Stay updated with the latest breakthroughs and industry news.
-                    </p>
-                    <div className="text-primary-400 font-mono text-sm">Coming Soon</div>
-                </UIPanel>
-
-                <UIPanel className="h-full">
-                    <h3 className="text-2xl font-bold text-white mb-4">Marketplace</h3>
-                    <p className="text-gray-400 mb-6">
-                        Buy and sell robotics parts, sensors, and hardware.
-                    </p>
-                    <div className="text-primary-400 font-mono text-sm">Coming Soon</div>
-                </UIPanel>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {features.map((feature) => (
+                    <UIPanel key={feature.title} className="h-full">
+                        <div className="flex items-start justify-between mb-4">
+                            <span className="text-3xl">{feature.icon}</span>
+                            <span className={`px-2 py-1 rounded text-xs font-medium ${feature.status === 'Live'
+                                    ? 'bg-green-500/20 text-green-400'
+                                    : 'bg-yellow-500/20 text-yellow-400'
+                                }`}>
+                                {feature.status}
+                            </span>
+                        </div>
+                        <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
+                        <p className="text-gray-400 text-sm leading-relaxed">
+                            {feature.description}
+                        </p>
+                    </UIPanel>
+                ))}
             </div>
 
-            <section className="mt-20 text-center">
+            {/* Stats Section */}
+            <section className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                {[
+                    { label: "Active Users", value: "1,000+", icon: "👥" },
+                    { label: "Learning Modules", value: "50+", icon: "📖" },
+                    { label: "Community Posts", value: "500+", icon: "💬" },
+                    { label: "Quiz Questions", value: "1,000+", icon: "❓" }
+                ].map((stat) => (
+                    <UIPanel key={stat.label} className="text-center">
+                        <span className="text-2xl mb-2 block">{stat.icon}</span>
+                        <div className="text-2xl font-bold text-primary-400">{stat.value}</div>
+                        <div className="text-sm text-gray-400">{stat.label}</div>
+                    </UIPanel>
+                ))}
+            </section>
+
+            <section className="mt-12 text-center space-y-6">
+                <p className="text-gray-400 max-w-2xl mx-auto">
+                    RoboCloud Hub is my passion project to create a comprehensive ecosystem for robotics enthusiasts,
+                    students, and professionals. Join our growing community today!
+                </p>
                 <a
                     href="https://robocloud-dashboard.vercel.app/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white rounded-full text-lg font-bold transition-all transform hover:scale-105 shadow-lg hover:shadow-primary-500/25"
                 >
-                    Visit Live Platform <span className="ml-2">→</span>
+                    Visit RoboCloud Hub <span className="ml-2">→</span>
                 </a>
             </section>
         </div>
