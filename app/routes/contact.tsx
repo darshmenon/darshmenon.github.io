@@ -3,21 +3,26 @@ import { UIPanel } from "~/components/ui/UIPanel";
 
 export const meta: MetaFunction = () => {
     return [
-        { title: "Contact Darsh Menon | Robotics Software Engineer | Asimov Robotics" },
+        { title: "Contact Darsh Menon | Robotics Software Engineer | ROS 2 Consulting" },
         {
             name: "description",
-            content: "Get in touch with Darsh Menon for robotics collaborations, ROS 2 consulting, autonomous systems development, or career opportunities. Based in Kochi, Kerala, India."
+            content: "Contact Darsh Menon for robotics consulting, ROS 2 development, autonomous systems projects, or career opportunities. Robotics Software Engineer at Asimov Robotics, Kochi, Kerala, India. Open for collaborations and freelance robotics work."
         },
-        { name: "keywords", content: "Contact Darsh Menon, Robotics Engineer Contact, ROS 2 Developer, Kochi India, Asimov Robotics" },
+        { name: "keywords", content: "Contact Darsh Menon, Hire Robotics Engineer, ROS 2 Developer India, ROS 2 Consulting, Robotics Freelancer, Asimov Robotics Kochi, Autonomous Systems Developer, Computer Vision Consultant, SLAM Developer India, Kerala Robotics Engineer" },
+        { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1" },
+        { name: "googlebot", content: "index, follow" },
         // Open Graph
         { property: "og:title", content: "Contact Darsh Menon | Robotics Software Engineer" },
-        { property: "og:description", content: "Get in touch for robotics collaborations, ROS 2 consulting, or project discussions." },
+        { property: "og:description", content: "Get in touch for robotics consulting, ROS 2 development, autonomous systems projects, or career opportunities." },
         { property: "og:type", content: "website" },
         { property: "og:url", content: "https://darshmenon.github.io/contact" },
+        { property: "og:site_name", content: "Darsh Menon Portfolio" },
         // Twitter Card
         { name: "twitter:card", content: "summary" },
-        { name: "twitter:title", content: "Contact Darsh Menon | Robotics Software Engineer" },
-        { name: "twitter:description", content: "Get in touch for robotics collaborations, ROS 2 consulting, or project discussions." },
+        { name: "twitter:title", content: "Contact Darsh Menon | Robotics Engineer" },
+        { name: "twitter:description", content: "Get in touch for robotics consulting, ROS 2 development, or project discussions." },
+        // Canonical
+        { tagName: "link", rel: "canonical", href: "https://darshmenon.github.io/contact" },
     ];
 };
 

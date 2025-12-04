@@ -4,21 +4,26 @@ import { projects } from "~/data/projects";
 
 export const meta: MetaFunction = () => {
     return [
-        { title: "Projects | Darsh Menon | ROS 2 Robotics & Autonomous Systems Portfolio" },
+        { title: "Robotics Projects | Darsh Menon | ROS 2, SLAM, Computer Vision Portfolio" },
         {
             name: "description",
-            content: "Explore Darsh Menon's robotics projects including RoboCloud Hub, RL Bipedal Walking Robot, Mobile Pick-and-Place systems, and autonomous navigation solutions using ROS 2, Python, and Computer Vision."
+            content: "Explore Darsh Menon's robotics portfolio: RoboCloud Hub learning platform, RL Bipedal Walking Robot, Mobile Pick-and-Place systems, autonomous navigation solutions. Built with ROS 2, Python, C++, PyTorch, OpenCV, and Gazebo simulation. Open source robotics projects."
         },
-        { name: "keywords", content: "Darsh Menon Projects, ROS 2 Projects, Robotics Portfolio, Autonomous Navigation, Reinforcement Learning Robot, Computer Vision Projects, Python Robotics, BITS Pilani" },
+        { name: "keywords", content: "Darsh Menon Projects, ROS 2 Projects, Robotics Portfolio, Autonomous Navigation Projects, Reinforcement Learning Robot, Computer Vision Projects, Python Robotics GitHub, BITS Pilani Robotics, Pick and Place Robot ROS 2, Bipedal Robot RL, SLAM Projects, Gazebo Simulation, OpenCV Projects, MoveIt 2 Projects, Open Source Robotics" },
+        { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1" },
+        { name: "googlebot", content: "index, follow" },
         // Open Graph
-        { property: "og:title", content: "Projects | Darsh Menon | Robotics Engineer" },
-        { property: "og:description", content: "Explore robotics projects including RoboCloud Hub, RL Bipedal Walking, and autonomous navigation systems." },
+        { property: "og:title", content: "Robotics Projects | Darsh Menon | ROS 2 & Computer Vision Portfolio" },
+        { property: "og:description", content: "Explore robotics projects: RoboCloud Hub, RL Bipedal Walking, autonomous navigation, pick-and-place systems. Built with ROS 2, Python, C++, and PyTorch." },
         { property: "og:type", content: "website" },
         { property: "og:url", content: "https://darshmenon.github.io/projects" },
+        { property: "og:site_name", content: "Darsh Menon Portfolio" },
         // Twitter Card
         { name: "twitter:card", content: "summary" },
-        { name: "twitter:title", content: "Projects | Darsh Menon | Robotics Engineer" },
-        { name: "twitter:description", content: "Explore robotics projects including RoboCloud Hub, RL Bipedal Walking, and autonomous navigation systems." },
+        { name: "twitter:title", content: "Robotics Projects | Darsh Menon" },
+        { name: "twitter:description", content: "Explore robotics projects: RoboCloud Hub, RL Bipedal Walking, autonomous navigation systems built with ROS 2." },
+        // Canonical
+        { tagName: "link", rel: "canonical", href: "https://darshmenon.github.io/projects" },
     ];
 };
 

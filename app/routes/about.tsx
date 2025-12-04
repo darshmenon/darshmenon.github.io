@@ -3,21 +3,26 @@ import { UIPanel } from "~/components/ui/UIPanel";
 
 export const meta: MetaFunction = () => {
     return [
-        { title: "About Darsh Menon | Robotics Software Engineer at Asimov Robotics | BITS Pilani" },
+        { title: "About Darsh Menon | Robotics Software Engineer at Asimov Robotics | BITS Pilani Graduate" },
         {
             name: "description",
-            content: "Darsh Menon is a Robotics Software Engineer at Asimov Robotics specializing in ROS 2, Computer Vision, and Autonomous Navigation. BITS Pilani graduate with experience at Growth Jockey. Building intelligent autonomous systems."
+            content: "Learn about Darsh Menon, a Robotics Software Engineer at Asimov Robotics in Kochi, India. BITS Pilani Mechanical Engineering graduate with expertise in ROS 2, Computer Vision, SLAM, MoveIt 2, Autonomous Navigation, and Reinforcement Learning. Previously at Growth Jockey. Building intelligent autonomous systems for humanoid robots."
         },
-        { name: "keywords", content: "Darsh Menon, Robotics Engineer, ROS 2, Asimov Robotics, BITS Pilani, Computer Vision, Autonomous Navigation, Python, C++, Gazebo, MoveIt" },
+        { name: "keywords", content: "Darsh Menon About, Robotics Engineer Resume, ROS 2 Developer India, Asimov Robotics Engineer, BITS Pilani Alumni, Computer Vision Expert, Autonomous Navigation, SLAM Developer, MoveIt 2, Python C++ Developer, Growth Jockey, Kochi Kerala, Robotics Professional, Humanoid Robot Developer, Machine Learning Engineer" },
+        { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1" },
+        { name: "googlebot", content: "index, follow" },
         // Open Graph
-        { property: "og:title", content: "About Darsh Menon | Robotics Software Engineer" },
-        { property: "og:description", content: "Robotics Software Engineer at Asimov Robotics specializing in ROS 2, Computer Vision, and Autonomous Navigation. BITS Pilani graduate." },
+        { property: "og:title", content: "About Darsh Menon | Robotics Software Engineer at Asimov Robotics" },
+        { property: "og:description", content: "Robotics Software Engineer at Asimov Robotics. BITS Pilani graduate specializing in ROS 2, Computer Vision, SLAM, and Autonomous Navigation. Building intelligent autonomous systems." },
         { property: "og:type", content: "profile" },
         { property: "og:url", content: "https://darshmenon.github.io/about" },
+        { property: "og:site_name", content: "Darsh Menon Portfolio" },
         // Twitter Card
         { name: "twitter:card", content: "summary" },
         { name: "twitter:title", content: "About Darsh Menon | Robotics Software Engineer" },
-        { name: "twitter:description", content: "Robotics Software Engineer at Asimov Robotics specializing in ROS 2, Computer Vision, and Autonomous Navigation." },
+        { name: "twitter:description", content: "Robotics Software Engineer at Asimov Robotics. BITS Pilani graduate specializing in ROS 2, Computer Vision, and Autonomous Navigation." },
+        // Canonical
+        { tagName: "link", rel: "canonical", href: "https://darshmenon.github.io/about" },
     ];
 };
 

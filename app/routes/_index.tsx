@@ -10,14 +10,15 @@ export const meta: MetaFunction = () => {
         { title: "Darsh Menon | Robotics Software Engineer | ROS 2 Developer | BITS Pilani" },
         {
             name: "description",
-            content: "Darsh Menon - Robotics Software Engineer at Asimov Robotics. Specializing in ROS 2, Computer Vision, Autonomous Navigation, and Reinforcement Learning. BITS Pilani graduate building intelligent autonomous systems."
+            content: "Darsh Menon - Robotics Software Engineer at Asimov Robotics, Kochi, India. Expert in ROS 2, Computer Vision, Autonomous Navigation, SLAM, MoveIt 2, PyTorch, OpenCV, and Reinforcement Learning. BITS Pilani Mechanical Engineering graduate. Building intelligent autonomous systems for humanoid robots and industrial automation."
         },
-        { name: "keywords", content: "Darsh Menon, Robotics Engineer, ROS 2, Asimov Robotics, BITS Pilani, Computer Vision, Autonomous Navigation, Python, C++, Gazebo, MoveIt, PyTorch, Machine Learning, India, Kochi" },
+        { name: "keywords", content: "Darsh Menon, Robotics Engineer, ROS 2 Developer, Asimov Robotics, BITS Pilani, Computer Vision Engineer, Autonomous Navigation, SLAM, MoveIt 2, Python Developer, C++ Developer, Gazebo Simulation, PyTorch, OpenCV, Machine Learning Engineer, Reinforcement Learning, India, Kochi, Kerala, Robotics Jobs India, Humanoid Robots, Industrial Automation, Pick and Place Robot, Mobile Robot Navigation" },
         { name: "author", content: "Darsh Menon" },
-        { name: "robots", content: "index, follow" },
+        { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
+        { name: "googlebot", content: "index, follow" },
         // Open Graph
-        { property: "og:title", content: "Darsh Menon | Robotics Software Engineer" },
-        { property: "og:description", content: "Robotics Software Engineer at Asimov Robotics. Specializing in ROS 2, Computer Vision, and Autonomous Navigation. BITS Pilani graduate." },
+        { property: "og:title", content: "Darsh Menon | Robotics Software Engineer | ROS 2 Expert" },
+        { property: "og:description", content: "Robotics Software Engineer at Asimov Robotics. Expert in ROS 2, Computer Vision, SLAM, and Autonomous Navigation. BITS Pilani graduate building intelligent autonomous systems." },
         { property: "og:type", content: "website" },
         { property: "og:url", content: "https://darshmenon.github.io/" },
         { property: "og:site_name", content: "Darsh Menon Portfolio" },
@@ -27,7 +28,7 @@ export const meta: MetaFunction = () => {
         { name: "twitter:site", content: "@darsh_menon" },
         { name: "twitter:creator", content: "@darsh_menon" },
         { name: "twitter:title", content: "Darsh Menon | Robotics Software Engineer" },
-        { name: "twitter:description", content: "Robotics Software Engineer at Asimov Robotics. Specializing in ROS 2, Computer Vision, and Autonomous Navigation." },
+        { name: "twitter:description", content: "Robotics Software Engineer at Asimov Robotics. Expert in ROS 2, Computer Vision, and Autonomous Navigation." },
         // Canonical
         { tagName: "link", rel: "canonical", href: "https://darshmenon.github.io/" },
     ];
@@ -36,7 +37,7 @@ export const meta: MetaFunction = () => {
 export default function Index() {
     return (
         <div className="min-h-screen">
-            {/* JSON-LD Structured Data */}
+            {/* JSON-LD Structured Data - Person */}
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{
@@ -64,7 +65,12 @@ export default function Index() {
                             "Python",
                             "C++",
                             "Machine Learning",
-                            "Reinforcement Learning"
+                            "Reinforcement Learning",
+                            "SLAM",
+                            "MoveIt 2",
+                            "Gazebo",
+                            "OpenCV",
+                            "PyTorch"
                         ],
                         "sameAs": [
                             "https://github.com/darshmenon",
@@ -78,6 +84,94 @@ export default function Index() {
                             "addressRegion": "Kerala",
                             "addressCountry": "India"
                         }
+                    })
+                }}
+            />
+
+            {/* BreadcrumbList Schema */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "BreadcrumbList",
+                        "itemListElement": [
+                            {
+                                "@type": "ListItem",
+                                "position": 1,
+                                "name": "Home",
+                                "item": "https://darshmenon.github.io/"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 2,
+                                "name": "About",
+                                "item": "https://darshmenon.github.io/about"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 3,
+                                "name": "Projects",
+                                "item": "https://darshmenon.github.io/projects"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 4,
+                                "name": "Contact",
+                                "item": "https://darshmenon.github.io/contact"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 5,
+                                "name": "RoboCloud Hub",
+                                "item": "https://darshmenon.github.io/robocloud-hub"
+                            }
+                        ]
+                    })
+                }}
+            />
+
+            {/* FAQPage Schema */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "FAQPage",
+                        "mainEntity": [
+                            {
+                                "@type": "Question",
+                                "name": "What is Darsh Menon's expertise in robotics?",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Darsh Menon specializes in ROS 2, Computer Vision, Autonomous Navigation, SLAM, MoveIt 2, and Reinforcement Learning. He works as a Robotics Software Engineer at Asimov Robotics, developing multi-robot navigation and perception systems."
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                "name": "Where did Darsh Menon study?",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Darsh Menon graduated from Birla Institute of Technology and Science (BITS) Pilani with a Bachelor of Engineering (Honors) in Mechanical Engineering in 2024."
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                "name": "What programming languages does Darsh Menon use?",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Darsh Menon is proficient in Python and C++ for robotics development, along with TypeScript, React, and Node.js for web development. He also works with frameworks like PyTorch, OpenCV, and ROS 2."
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                "name": "What projects has Darsh Menon worked on?",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Darsh has worked on various robotics projects including autonomous pick-and-place systems, RL-based bipedal walking robots, mobile robot navigation with SLAM, and RoboCloud Hub - a comprehensive robotics learning platform."
+                                }
+                            }
+                        ]
                     })
                 }}
             />
