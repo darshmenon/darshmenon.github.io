@@ -88,6 +88,32 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Footer />
         <ScrollRestoration />
         <Scripts />
+        <noscript>
+          <div style={{ padding: '40px', maxWidth: '800px', margin: '0 auto', fontFamily: 'system-ui, sans-serif', color: '#333', backgroundColor: '#fff' }}>
+            <h1>Darsh Menon - Robotics Software Engineer</h1>
+            <p>Welcome to the portfolio of Darsh Menon, a Robotics Software Engineer at Asimov Robotics specializing in ROS 2, Computer Vision, Autonomous Navigation, and Reinforcement Learning. BITS Pilani graduate with experience in building intelligent autonomous systems.</p>
+            <h2>About</h2>
+            <p>I am a passionate robotics engineer with expertise in developing autonomous systems, computer vision applications, and reinforcement learning algorithms. Currently working at Asimov Robotics in Kochi, Kerala, India.</p>
+            <h2>Skills</h2>
+            <ul>
+              <li>ROS 2, MoveIt 2, Navigation Stack</li>
+              <li>Python, C++, PyTorch, OpenCV</li>
+              <li>Gazebo, Docker, Linux</li>
+              <li>Computer Vision, Machine Learning</li>
+            </ul>
+            <h2>Projects</h2>
+            <ul>
+              <li><strong>RoboCloud Hub</strong> - A comprehensive robotics ecosystem platform</li>
+              <li><strong>RL Bipedal Walking Robot</strong> - Reinforcement learning for bipedal locomotion</li>
+              <li><strong>Autonomous Pick-and-Place</strong> - ROS 2 based manipulation system</li>
+              <li><strong>Mobile Navigation System</strong> - SLAM and path planning implementation</li>
+            </ul>
+            <h2>Contact</h2>
+            <p>Email: darshmenon02@gmail.com</p>
+            <p>Location: Kochi, Kerala, India</p>
+            <p><a href="https://github.com/darshmenon">GitHub</a> | <a href="https://linkedin.com/in/darsh-menon">LinkedIn</a></p>
+          </div>
+        </noscript>
       </body>
     </html>
   );
