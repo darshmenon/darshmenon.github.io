@@ -35,6 +35,7 @@ export const meta: MetaFunction = () => [
   { name: "googlebot", content: "index, follow" },
   { name: "author", content: "Darsh Menon" },
   { name: "theme-color", content: "#7c3aed" },
+  { name: "google-site-verification", content: "googleea716b0e0ba79f4e" },
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
