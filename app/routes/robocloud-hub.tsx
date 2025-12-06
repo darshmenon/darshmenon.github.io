@@ -111,6 +111,14 @@ export default function RoboCloudHub() {
                     The Future of Robotics Collaboration. A unified platform for learning, networking, and career growth
                     in the robotics industry. Built with React, Node.js, and powered by a passionate community.
                 </p>
+                <a
+                    href="https://robocloud-dashboard.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white rounded-full text-lg font-bold transition-all transform hover:scale-105 shadow-lg hover:shadow-primary-500/25"
+                >
+                    Visit RoboCloud Hub <span className="ml-2">→</span>
+                </a>
             </section>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -149,19 +157,11 @@ export default function RoboCloudHub() {
                 ))}
             </section>
 
-            <section className="mt-12 text-center space-y-6">
+            <section className="mt-12 text-center">
                 <p className="text-gray-400 max-w-2xl mx-auto">
                     RoboCloud Hub is my passion project to create a comprehensive ecosystem for robotics enthusiasts,
                     students, and professionals. Join our growing community today!
                 </p>
-                <a
-                    href="https://robocloud-dashboard.vercel.app/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white rounded-full text-lg font-bold transition-all transform hover:scale-105 shadow-lg hover:shadow-primary-500/25"
-                >
-                    Visit RoboCloud Hub <span className="ml-2">→</span>
-                </a>
             </section>
         </div>
     );
