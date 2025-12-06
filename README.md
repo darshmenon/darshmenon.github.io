@@ -1,6 +1,6 @@
 # Darsh Menon | Professional Portfolio
 
-🚀 **Live Site:** [https://darshmenon.github.io/DarshPortfolio/](https://darshmenon.github.io/DarshPortfolio/)
+🚀 **Live Site:** [https://darshmenon.github.io/](https://darshmenon.github.io/)
 
 A modern, professional portfolio website built with React Router, TypeScript, and TailwindCSS.
 
