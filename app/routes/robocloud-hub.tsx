@@ -1,5 +1,15 @@
 import type { MetaFunction } from "react-router";
 import { UIPanel } from "~/components/ui/UIPanel";
+import {
+    BookOpenIcon,
+    ChatBubbleLeftRightIcon,
+    BriefcaseIcon,
+    NewspaperIcon,
+    ShoppingCartIcon,
+    RocketLaunchIcon,
+    UsersIcon,
+    QuestionMarkCircleIcon
+} from "@heroicons/react/24/outline";
 
 export const meta: MetaFunction = () => {
     return [
@@ -26,37 +36,37 @@ const features = [
         title: "Learning Paths",
         description: "Structured courses and tutorials for mastering ROS 2, computer vision, and autonomous navigation. From beginner to advanced levels.",
         status: "Live",
-        icon: "📚"
+        Icon: BookOpenIcon
     },
     {
         title: "Community Forums",
         description: "Connect with robotics engineers worldwide. Share projects, ask questions, and collaborate on cutting-edge research.",
         status: "Live",
-        icon: "💬"
+        Icon: ChatBubbleLeftRightIcon
     },
     {
         title: "Job Board",
         description: "Find the latest opportunities in robotics, automation, and autonomous systems from top companies worldwide.",
         status: "Coming Soon",
-        icon: "💼"
+        Icon: BriefcaseIcon
     },
     {
         title: "News Feed",
         description: "Stay updated with the latest breakthroughs, research papers, and industry news in the robotics field.",
         status: "Live",
-        icon: "📰"
+        Icon: NewspaperIcon
     },
     {
         title: "Marketplace",
         description: "Buy and sell robotics parts, sensors, actuators, and development kits from trusted sellers.",
         status: "Coming Soon",
-        icon: "🛒"
+        Icon: ShoppingCartIcon
     },
     {
         title: "Project Showcase",
         description: "Showcase your robotics projects to the community and get feedback from experienced engineers.",
         status: "Live",
-        icon: "🚀"
+        Icon: RocketLaunchIcon
     }
 ];
 
@@ -107,10 +117,10 @@ export default function RoboCloudHub() {
                 {features.map((feature) => (
                     <UIPanel key={feature.title} className="h-full">
                         <div className="flex items-start justify-between mb-4">
-                            <span className="text-3xl">{feature.icon}</span>
+                            <feature.Icon className="h-8 w-8 text-primary-400" />
                             <span className={`px-2 py-1 rounded text-xs font-medium ${feature.status === 'Live'
-                                    ? 'bg-green-500/20 text-green-400'
-                                    : 'bg-yellow-500/20 text-yellow-400'
+                                ? 'bg-green-500/20 text-green-400'
+                                : 'bg-yellow-500/20 text-yellow-400'
                                 }`}>
                                 {feature.status}
                             </span>
@@ -126,13 +136,13 @@ export default function RoboCloudHub() {
             {/* Stats Section */}
             <section className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 {[
-                    { label: "Active Users", value: "1,000+", icon: "👥" },
-                    { label: "Learning Modules", value: "50+", icon: "📖" },
-                    { label: "Community Posts", value: "500+", icon: "💬" },
-                    { label: "Quiz Questions", value: "1,000+", icon: "❓" }
+                    { label: "Active Users", value: "1,000+", Icon: UsersIcon },
+                    { label: "Learning Modules", value: "50+", Icon: BookOpenIcon },
+                    { label: "Community Posts", value: "500+", Icon: ChatBubbleLeftRightIcon },
+                    { label: "Quiz Questions", value: "1,000+", Icon: QuestionMarkCircleIcon }
                 ].map((stat) => (
                     <UIPanel key={stat.label} className="text-center">
-                        <span className="text-2xl mb-2 block">{stat.icon}</span>
+                        <stat.Icon className="h-8 w-8 mx-auto mb-2 text-primary-400" />
                         <div className="text-2xl font-bold text-primary-400">{stat.value}</div>
                         <div className="text-sm text-gray-400">{stat.label}</div>
                     </UIPanel>
