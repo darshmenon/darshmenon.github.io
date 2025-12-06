@@ -1,9 +1,9 @@
-import { ReactNode } from 'react';
+import * as React from 'react';
 import { cn } from '~/utils/cn';
 
 interface UIPanelProps {
     title?: string;
-    children: ReactNode;
+    children: React.ReactNode;
     className?: string;
     noPadding?: boolean;
 }

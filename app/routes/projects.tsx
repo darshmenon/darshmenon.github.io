@@ -71,10 +71,10 @@ export default function Projects() {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 {projects.map((project) => (
-                    <UIPanel key={project.id} noPadding className="group h-full flex flex-col">
+                    <UIPanel key={project.id} noPadding className="h-full flex flex-col">
                         <div className="p-8 flex-1">
                             <div className="flex justify-between items-start mb-4">
-                                <h3 className="text-2xl font-bold text-white group-hover:text-primary-400 transition-colors">
+                                <h3 className="text-2xl font-bold text-white">
                                     {project.title}
                                 </h3>
                                 <div className="flex gap-4">
@@ -100,7 +100,7 @@ export default function Projects() {
 
                             <div className="flex flex-wrap gap-2 mt-auto">
                                 {project.tags.map((tag) => (
-                                    <span key={tag} className="text-xs font-mono text-primary-300 bg-primary-500/10 px-2 py-1 rounded">
+                                    <span key={tag} className="text-xs font-mono text-primary-300 bg-primary-500/10 px-3 py-1.5 rounded-full border border-primary-500/20">
                                         {tag}
                                     </span>
                                 ))}

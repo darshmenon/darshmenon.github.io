@@ -40,5 +40,21 @@ export const projects: Project[] = [
         tags: ["ROS 2", "MoveIt 2", "Computer Vision", "Industrial Automation"],
         link: "https://github.com/darshmenon/UR3_ROS2_PICK_AND_PLACE",
         github: "https://github.com/darshmenon/UR3_ROS2_PICK_AND_PLACE"
+    },
+    {
+        id: "intelligent-navigation",
+        title: "Intelligent Navigation System",
+        description: "Complete autonomous navigation pipeline featuring SLAM mapping, dynamic obstacle avoidance, and path planning. Built with Nav2 stack, SLAM Toolbox, and advanced algorithms for real-time LiDAR processing and localization in complex environments.",
+        tags: ["ROS 2", "SLAM", "Navigation", "Nav2", "LiDAR"],
+        link: "https://github.com/darshmenon/rosnav",
+        github: "https://github.com/darshmenon/rosnav"
+    },
+    {
+        id: "handbot-ros2",
+        title: "HandBot ROS2 Ecosystem",
+        description: "Comprehensive ROS2-based manipulation framework with advanced gripper control, perception pipeline integration, and task orchestration capabilities. Designed for complex multi-step robotics operations with modular architecture for easy extensibility.",
+        tags: ["ROS 2", "Manipulation", "Gripper Control", "Task Planning", "Modular Architecture"],
+        link: "https://github.com/darshmenon/handbot_ros2",
+        github: "https://github.com/darshmenon/handbot_ros2"
     }
 ];

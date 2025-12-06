@@ -205,12 +205,21 @@ export default function Contact() {
                 </p>
                 <a
                     href="mailto:darshmenon02@gmail.com?subject=Collaboration%20Inquiry"
-                    className="inline-flex items-center gap-2 px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white rounded-full font-medium transition-all transform hover:scale-105 shadow-lg shadow-primary-600/25"
+                    className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-500 hover:to-primary-600 text-white rounded-full font-bold transition-all transform hover:scale-110 relative overflow-hidden group"
+                    style={{
+                        boxShadow: '0 0 30px rgba(147, 112, 219, 0.5), 0 15px 30px rgba(147, 112, 219, 0.3)',
+                        border: '2px solid rgba(186, 85, 211, 0.5)',
+                        textShadow: '0 2px 4px rgba(0, 0, 0, 0.5)'
+                    }}
                 >
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    {/* Animated shine effect */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                        style={{ transform: 'skewX(-25deg)', animation: 'shine 2s infinite' }} />
+
+                    <svg className="w-5 h-5 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
-                    Send an Email
+                    <span className="relative z-10">Send an Email</span>
                 </a>
             </UIPanel>
         </div>
