@@ -144,9 +144,9 @@ export default function RoboCloudHub() {
             {/* Stats Section */}
             <section className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 {[
-                    { label: "Active Users", value: "1,000+", Icon: UsersIcon },
-                    { label: "Learning Modules", value: "50+", Icon: BookOpenIcon },
-                    { label: "Community Posts", value: "500+", Icon: ChatBubbleLeftRightIcon },
+                    { label: "Interactive Experiences", value: "50+", Icon: RocketLaunchIcon },
+                    { label: "Community", value: "10+", Icon: UsersIcon },
+                    { label: "Blogs", value: "20+", Icon: NewspaperIcon },
                     { label: "Quiz Questions", value: "1,000+", Icon: QuestionMarkCircleIcon }
                 ].map((stat) => (
                     <UIPanel key={stat.label} className="text-center">
