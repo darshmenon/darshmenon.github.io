@@ -100,7 +100,7 @@ export default function RoboCloudHub() {
 
             <section className="space-y-6">
                 <div className="flex items-center gap-4">
-                    <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary-400 to-primary-600">
+                    <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary-300 to-primary-500">
                         ROBOCLOUD HUB
                     </h1>
                     <span className="px-3 py-1 bg-green-500/20 border border-green-500/30 rounded-full text-green-400 text-sm font-medium">
@@ -115,7 +115,7 @@ export default function RoboCloudHub() {
                     href="https://robocloud-dashboard.vercel.app/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white rounded-full text-lg font-bold transition-all transform hover:scale-105 shadow-lg hover:shadow-primary-500/25"
+                    className="inline-flex items-center justify-center px-8 py-4 bg-primary-800 hover:bg-primary-900 text-white rounded-full text-lg font-bold transition-all transform hover:scale-105 shadow-lg hover:shadow-primary-700/25"
                 >
                     Visit RoboCloud Hub <span className="ml-2">→</span>
                 </a>
