@@ -83,7 +83,7 @@ const education = [
         institution: "Birla Institute of Technology & Science, Pilani",
         campus: "Goa Campus",
         year: "2020 - 2024",
-        cgpa: "7.16/10",
+        grade: "CGPA: 7.16/10",
         highlights: [
             "Relevant Coursework: Robotics, Control Systems, Machine Design, CAD/CAM",
             "Projects: Autonomous navigation systems, Robotic arm manipulation",
@@ -96,7 +96,7 @@ const education = [
         institution: "FIITJEE",
         campus: "Kochi, Kerala",
         year: "2018 - 2020",
-        cgpa: "",
+        grade: "Percentage: 93.4%",
         highlights: [
             "JEE Advanced preparation with focus on Physics and Mathematics",
             "Strong foundation in problem-solving and analytical thinking",
@@ -197,7 +197,7 @@ export default function About() {
                                     </div>
                                     <div className="text-right">
                                         <div className="text-primary-300 font-mono font-bold">{edu.year}</div>
-                                        <div className="text-gray-400">CGPA: {edu.cgpa}</div>
+                                        <div className="text-gray-400">{edu.grade}</div>
                                     </div>
                                 </div>
                                 <div className="text-lg text-gray-300">

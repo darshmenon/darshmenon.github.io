@@ -42,9 +42,7 @@ export function Footer() {
                     <p className="text-gray-500 text-sm">
                         © {currentYear} Darsh Menon. All rights reserved.
                     </p>
-                    <p className="text-gray-600 text-sm font-mono">
-                        Built with Remix & Tailwind
-                    </p>
+
                 </div>
             </div>
         </footer>
