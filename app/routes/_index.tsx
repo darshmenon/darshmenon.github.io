@@ -21,6 +21,12 @@ export const meta: MetaFunction = () => {
         { property: "og:description", content: "Robotics Software Engineer at Asimov Robotics. Expert in ROS 2, Computer Vision, SLAM, and Autonomous Navigation. BITS Pilani graduate building intelligent autonomous systems." },
         { property: "og:type", content: "website" },
         { property: "og:url", content: "https://darshmenon.github.io/" },
+        { property: "og:image", content: "https://darshmenon.github.io/profilepic.jpg" },
+        { property: "og:image:secure_url", content: "https://darshmenon.github.io/profilepic.jpg" },
+        { property: "og:image:type", content: "image/jpeg" },
+        { property: "og:image:width", content: "400" },
+        { property: "og:image:height", content: "400" },
+        { property: "og:image:alt", content: "Darsh Menon - Robotics Software Engineer" },
         { property: "og:site_name", content: "Darsh Menon Portfolio" },
         { property: "og:locale", content: "en_US" },
         // Twitter Card
@@ -29,6 +35,8 @@ export const meta: MetaFunction = () => {
         { name: "twitter:creator", content: "@darsh_menon" },
         { name: "twitter:title", content: "Darsh Menon | Robotics Software Engineer" },
         { name: "twitter:description", content: "Robotics Software Engineer at Asimov Robotics. Expert in ROS 2, Computer Vision, and Autonomous Navigation." },
+        { name: "twitter:image", content: "https://darshmenon.github.io/profilepic.jpg" },
+        { name: "twitter:image:alt", content: "Darsh Menon - Robotics Software Engineer" },
         // Canonical
         { tagName: "link", rel: "canonical", href: "https://darshmenon.github.io/" },
     ];
@@ -46,6 +54,13 @@ export default function Index() {
                         "@type": "Person",
                         "name": "Darsh Menon",
                         "url": "https://darshmenon.github.io/",
+                        "image": {
+                            "@type": "ImageObject",
+                            "url": "https://darshmenon.github.io/profilepic.jpg",
+                            "width": "400",
+                            "height": "400",
+                            "caption": "Darsh Menon - Robotics Software Engineer"
+                        },
                         "jobTitle": "Robotics Software Engineer",
                         "worksFor": {
                             "@type": "Organization",
@@ -57,6 +72,7 @@ export default function Index() {
                             "name": "Birla Institute of Technology and Science, Pilani",
                             "sameAs": "https://www.bits-pilani.ac.in/"
                         },
+                        "email": "darshmenon02@gmail.com",
                         "knowsAbout": [
                             "ROS 2",
                             "Robotics",
@@ -71,6 +87,12 @@ export default function Index() {
                             "Gazebo",
                             "OpenCV",
                             "PyTorch"
+                        ],
+                        "knowsLanguage": [
+                            {
+                                "@type": "Language",
+                                "name": "English"
+                            }
                         ],
                         "sameAs": [
                             "https://github.com/darshmenon",

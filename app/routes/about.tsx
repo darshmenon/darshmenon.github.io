@@ -16,11 +16,19 @@ export const meta: MetaFunction = () => {
         { property: "og:description", content: "Robotics Software Engineer at Asimov Robotics. BITS Pilani graduate specializing in ROS 2, Computer Vision, SLAM, and Autonomous Navigation. Building intelligent autonomous systems." },
         { property: "og:type", content: "profile" },
         { property: "og:url", content: "https://darshmenon.github.io/about" },
+        { property: "og:image", content: "https://darshmenon.github.io/profilepic.jpg" },
+        { property: "og:image:secure_url", content: "https://darshmenon.github.io/profilepic.jpg" },
+        { property: "og:image:type", content: "image/jpeg" },
+        { property: "og:image:width", content: "400" },
+        { property: "og:image:height", content: "400" },
+        { property: "og:image:alt", content: "Darsh Menon - Robotics Software Engineer" },
         { property: "og:site_name", content: "Darsh Menon Portfolio" },
         // Twitter Card
-        { name: "twitter:card", content: "summary" },
+        { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:title", content: "About Darsh Menon | Robotics Software Engineer" },
         { name: "twitter:description", content: "Robotics Software Engineer at Asimov Robotics. BITS Pilani graduate specializing in ROS 2, Computer Vision, and Autonomous Navigation." },
+        { name: "twitter:image", content: "https://darshmenon.github.io/profilepic.jpg" },
+        { name: "twitter:image:alt", content: "Darsh Menon - Robotics Software Engineer" },
         // Canonical
         { tagName: "link", rel: "canonical", href: "https://darshmenon.github.io/about" },
     ];
@@ -116,7 +124,15 @@ export default function About() {
                         "@context": "https://schema.org",
                         "@type": "Person",
                         "name": "Darsh Menon",
+                        "image": {
+                            "@type": "ImageObject",
+                            "url": "https://darshmenon.github.io/profilepic.jpg",
+                            "width": "400",
+                            "height": "400",
+                            "caption": "Darsh Menon - Robotics Software Engineer"
+                        },
                         "jobTitle": "Robotics Software Engineer",
+                        "email": "darshmenon02@gmail.com",
                         "worksFor": {
                             "@type": "Organization",
                             "name": "Asimov Robotics"
