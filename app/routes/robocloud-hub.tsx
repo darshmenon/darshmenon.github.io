@@ -24,10 +24,16 @@ export const meta: MetaFunction = () => {
         { property: "og:description", content: "A comprehensive robotics ecosystem platform featuring learning paths, community forums, job board, and marketplace." },
         { property: "og:type", content: "website" },
         { property: "og:url", content: "https://darshmenon.github.io/robocloud-hub" },
+        { property: "og:image", content: "https://darshmenon.github.io/robocloud_preview.png" },
+        { property: "og:image:secure_url", content: "https://darshmenon.github.io/robocloud_preview.png" },
+        { property: "og:image:type", content: "image/png" },
+        { property: "og:image:alt", content: "RoboCloud Hub Interface" },
         // Twitter Card
-        { name: "twitter:card", content: "summary" },
+        { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:title", content: "RoboCloud Hub | Robotics Learning Platform" },
         { name: "twitter:description", content: "A comprehensive robotics ecosystem platform featuring learning paths, community forums, and job board." },
+        { name: "twitter:image", content: "https://darshmenon.github.io/robocloud_preview.png" },
+        { name: "twitter:image:alt", content: "RoboCloud Hub Dashboard Preview" },
     ];
 };
 

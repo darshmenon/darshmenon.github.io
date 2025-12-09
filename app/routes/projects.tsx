@@ -17,11 +17,17 @@ export const meta: MetaFunction = () => {
         { property: "og:description", content: "Explore robotics projects: RoboCloud Hub, RL Bipedal Walking, autonomous navigation, pick-and-place systems. Built with ROS 2, Python, C++, and PyTorch." },
         { property: "og:type", content: "website" },
         { property: "og:url", content: "https://darshmenon.github.io/projects" },
+        { property: "og:image", content: "https://darshmenon.github.io/projects_preview.png" },
+        { property: "og:image:secure_url", content: "https://darshmenon.github.io/projects_preview.png" },
+        { property: "og:image:type", content: "image/png" },
+        { property: "og:image:alt", content: "Robotics Projects Showcase" },
         { property: "og:site_name", content: "Darsh Menon Portfolio" },
         // Twitter Card
-        { name: "twitter:card", content: "summary" },
+        { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:title", content: "Robotics Projects | Darsh Menon" },
         { name: "twitter:description", content: "Explore robotics projects: RoboCloud Hub, RL Bipedal Walking, autonomous navigation systems built with ROS 2." },
+        { name: "twitter:image", content: "https://darshmenon.github.io/projects_preview.png" },
+        { name: "twitter:image:alt", content: "Bipedal Robot Reinforcement Learning Project" },
         // Canonical
         { tagName: "link", rel: "canonical", href: "https://darshmenon.github.io/projects" },
     ];
