@@ -6,4 +6,5 @@ export default [
     route("projects", "routes/projects.tsx"),
     route("contact", "routes/contact.tsx"),
     route("robocloud-hub", "routes/robocloud-hub.tsx"),
+    route("*?", "routes/not-found.tsx"),
 ] satisfies RouteConfig;
