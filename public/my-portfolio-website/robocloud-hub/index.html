@@ -1,0 +1,1429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="RoboCloud Hub - The Future of Robotics Collaboration. A unified platform for jobs, news, and marketplace.">
+    <title>RoboCloud Hub - Darsh Menon</title>
+    <link rel="icon" type="image/png" href="../assets/favicon.png">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://darshmenon.github.io/my-portfolio-website/robocloud-hub/">
+    <meta property="og:title" content="RoboCloud Hub - Robotics Learning Platform">
+    <meta property="og:description"
+        content="A unified platform for robotics jobs, news, marketplace and learning. The future of robotics collaboration.">
+    <meta property="og:image" content="https://darshmenon.github.io/my-portfolio-website/assets/robocloud_hub.png">
+    <meta property="og:image:secure_url"
+        content="https://darshmenon.github.io/my-portfolio-website/assets/robocloud_hub.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:alt" content="RoboCloud Hub Dashboard Interface">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://darshmenon.github.io/my-portfolio-website/robocloud-hub/">
+    <meta property="twitter:title" content="RoboCloud Hub - Robotics Learning Platform">
+    <meta property="twitter:description"
+        content="A unified platform for robotics jobs, news, marketplace and learning.">
+    <meta property="twitter:image" content="https://darshmenon.github.io/my-portfolio-website/assets/robocloud_hub.png">
+    <meta property="twitter:image:alt" content="RoboCloud Hub Dashboard Interface">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 16px;
+            -webkit-text-size-adjust: 100%;
+            -moz-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+        }
+
+        /* ENHANCED BODY WITH FONT FIXES */
+        body,
+        body * {
+            font-family: 'JetBrains Mono', monospace !important;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #fff;
+            background: linear-gradient(135deg, #0d0221 0%, #1a0933 50%, #0d0221 100%);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 100vh;
+            position: relative;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* iOS Safari specific fixes */
+        @supports (-webkit-touch-callout: none) {
+            body {
+                background-attachment: fixed !important;
+                background-repeat: no-repeat !important;
+                background-size: cover !important;
+                background-color: #0a0a0f !important;
+            }
+
+            html,
+            body {
+                height: 100%;
+                min-height: 100vh;
+                min-height: -webkit-fill-available;
+            }
+        }
+
+        /* CYBERPUNK GRID OVERLAY */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                linear-gradient(rgba(147, 112, 219, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(147, 112, 219, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: -1;
+            pointer-events: none;
+            animation: gridPulse 4s ease-in-out infinite;
+        }
+
+        @keyframes gridPulse {
+
+            0%,
+            100% {
+                opacity: 0.3;
+            }
+
+            50% {
+                opacity: 0.6;
+            }
+        }
+
+        /* Gradient overlay */
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(ellipse at top left, rgba(147, 112, 219, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at top right, rgba(186, 85, 211, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at center, rgba(255, 107, 107, 0.08) 0%, transparent 70%);
+            z-index: -999;
+            pointer-events: none;
+        }
+
+        /* Animated background particles */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -2;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            background: #ffffff;
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: float 20s infinite linear;
+            box-shadow: 0 0 10px rgba(147, 112, 219, 0.5);
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) translateX(-50px) rotate(0deg);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 0.4;
+            }
+
+            90% {
+                opacity: 0.15;
+            }
+
+            100% {
+                transform: translateY(-100px) translateX(50px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* TERMINAL-STYLE NAVBAR */
+        .navbar {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border-radius: 50px;
+            padding: 1rem 3rem 1rem 2.5rem;
+            z-index: 1000;
+            border: 2px solid #9370db;
+            box-shadow:
+                0 0 30px rgba(147, 112, 219, 0.4),
+                inset 0 0 20px rgba(147, 112, 219, 0.1),
+                0 10px 40px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease;
+            max-width: calc(100vw - 40px);
+        }
+
+        .navbar::before {
+            content: '>';
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #9370db;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+            font-size: 1.2rem;
+            animation: blink 1.5s infinite;
+        }
+
+        @keyframes blink {
+
+            0%,
+            50% {
+                opacity: 1;
+            }
+
+            51%,
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .navbar:hover {
+            background: rgba(0, 0, 0, 0.95);
+            border-color: #ba55d3;
+            box-shadow:
+                0 0 40px rgba(147, 112, 219, 0.6),
+                inset 0 0 30px rgba(147, 112, 219, 0.15),
+                0 15px 50px rgba(0, 0, 0, 0.6);
+        }
+
+        .nav-status {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #000;
+            border: 1px solid #da70d6;
+            color: #da70d6;
+            padding: 2px 10px;
+            font-size: 0.7rem;
+            font-family: 'JetBrains Mono', monospace;
+            border-radius: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 0 10px rgba(147, 112, 219, 0.5);
+            animation: statusPulse 2s infinite;
+            white-space: nowrap;
+        }
+
+        @keyframes statusPulse {
+
+            0%,
+            100% {
+                opacity: 1;
+                box-shadow: 0 0 10px rgba(147, 112, 219, 0.5);
+            }
+
+            50% {
+                opacity: 0.7;
+                box-shadow: 0 0 5px rgba(147, 112, 219, 0.2);
+            }
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: #9370db;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            font-family: 'JetBrains Mono', monospace !important;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.3rem 0;
+            white-space: nowrap;
+            text-shadow: 0 0 10px rgba(147, 112, 219, 0.3);
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #ba55d3;
+            text-shadow: 0 0 20px rgba(186, 85, 211, 0.8);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #9370db, #ba55d3);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+            border-radius: 1px;
+            box-shadow: 0 0 10px rgba(147, 112, 219, 0.8);
+        }
+
+        /* WHITE STARS / BUBBLES */
+        .white-star {
+            position: absolute;
+            background: #ffffff;
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: twinkle 4s infinite ease-in-out;
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+        }
+
+        @keyframes twinkle {
+
+            0%,
+            100% {
+                opacity: 0.3;
+                transform: scale(0.8);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.2);
+            }
+        }
+
+        /* NEON REFLECTION EFFECT */
+        .neon-reflection {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .neon-reflection::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transform: skewX(-25deg);
+            animation: reflect 6s infinite;
+        }
+
+        @keyframes reflect {
+            0% {
+                left: -100%;
+            }
+
+            20% {
+                left: 200%;
+            }
+
+            100% {
+                left: 200%;
+            }
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 120px 20px 40px;
+        }
+
+        /* PAGE SPECIFIC STYLES */
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'JetBrains Mono', monospace !important;
+            color: #fff;
+        }
+
+        .hero {
+            text-align: left;
+            margin-bottom: 4rem;
+            padding: 4rem 2rem;
+            background: rgba(0, 0, 0, 0.5);
+            border: 2px solid rgba(147, 112, 219, 0.3);
+            border-radius: 40px;
+            backdrop-filter: blur(30px);
+            box-shadow: 0 0 50px rgba(147, 112, 219, 0.2);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .hero>* {
+            text-align: left;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #9370db, #ba55d3, #9370db);
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            background: linear-gradient(135deg, #9370db, #ba55d3, #9370db);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 30px rgba(147, 112, 219, 0.5);
+        }
+
+        .hero-image {
+            width: 100%;
+            max-width: 800px;
+            margin: 2rem auto;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 0 30px rgba(147, 112, 219, 0.3);
+            border: 1px solid rgba(147, 112, 219, 0.2);
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .hero p {
+            font-family: 'JetBrains Mono', monospace !important;
+            font-size: 1.3rem;
+            background: linear-gradient(135deg, #e0b3ff 0%, #c79eff 50%, #b589ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            font-weight: 600;
+            text-shadow: 0 0 15px rgba(186, 85, 211, 0.4);
+            letter-spacing: 0.5px;
+            line-height: 1.8;
+        }
+
+        .section {
+            margin-bottom: 4rem;
+            padding: 3rem;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(147, 112, 219, 0.2);
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
+            animation: fadeInUp 1s ease-out;
+            text-align: left;
+        }
+
+        .section h2 {
+            font-size: 1.8rem;
+            color: #9370db;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid rgba(147, 112, 219, 0.2);
+            padding-bottom: 1rem;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(147, 112, 219, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: #9370db;
+            box-shadow: 0 10px 30px rgba(147, 112, 219, 0.1);
+        }
+
+        .feature-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: #ba55d3;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: flex-start;
+            margin-top: 2rem;
+        }
+
+        .tech-tag {
+            padding: 0.5rem 1.2rem;
+            background: rgba(147, 112, 219, 0.1);
+            border: 1px solid rgba(147, 112, 219, 0.3);
+            border-radius: 20px;
+            color: #9370db;
+            font-family: 'JetBrains Mono', monospace !important;
+            font-size: 0.9rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: linear-gradient(135deg, #9370db, #ba55d3);
+            color: #000;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 700;
+            font-family: 'JetBrains Mono', monospace !important;
+            transition: all 0.3s ease;
+            margin: 0.5rem;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 20px rgba(147, 112, 219, 0.6);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #9370db;
+            color: #9370db;
+        }
+
+        .btn-outline:hover {
+            background: rgba(147, 112, 219, 0.1);
+            color: #fff;
+        }
+
+        code {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: 'JetBrains Mono', monospace !important;
+            color: #ff79c6;
+        }
+
+        pre {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 1.5rem;
+            border-radius: 10px;
+            overflow-x: auto;
+            margin: 1rem 0;
+            border: 1px solid rgba(147, 112, 219, 0.2);
+        }
+
+        pre code {
+            background: transparent;
+            padding: 0;
+            color: #f8f8f2;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+
+        @media (max-width: 480px) {
+            html {
+                font-size: 12px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+
+        html {
+            font-size: 16px;
+            -webkit-text-size-adjust: 100%;
+            scroll-behavior: smooth;
+        }
+
+        body,
+        body * {
+            font-family: 'JetBrains Mono', monospace !important;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #fff;
+            background: linear-gradient(135deg, #0d0221 0%, #1a0933 50%, #0d0221 100%);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Background Effects */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                linear-gradient(rgba(147, 112, 219, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(147, 112, 219, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -2;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            background: #ffffff;
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: float 20s infinite linear;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) translateX(-50px) rotate(0deg);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(-100px) translateX(50px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border-radius: 50px;
+            padding: 1rem 3rem 1rem 2.5rem;
+            z-index: 1000;
+            border: 2px solid #9370db;
+            box-shadow: 0 0 30px rgba(147, 112, 219, 0.4);
+            max-width: calc(100vw - 40px);
+        }
+
+        .navbar::before {
+            content: '>';
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #9370db;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+            font-size: 1.2rem;
+            animation: blink 1.5s infinite;
+        }
+
+        @keyframes blink {
+
+            0%,
+            50% {
+                opacity: 1;
+            }
+
+            51%,
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: #9370db;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            font-family: 'JetBrains Mono', monospace !important;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #ba55d3;
+            text-shadow: 0 0 20px rgba(186, 85, 211, 0.8);
+        }
+
+        /* Container & Typography */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 120px 20px 40px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'JetBrains Mono', monospace !important;
+            color: #fff;
+        }
+
+        .hero {
+            text-align: left;
+            margin-bottom: 4rem;
+            padding: 4rem 2rem;
+            background: rgba(0, 0, 0, 0.5);
+            border: 2px solid rgba(147, 112, 219, 0.3);
+            border-radius: 40px;
+            backdrop-filter: blur(30px);
+            box-shadow: 0 0 50px rgba(147, 112, 219, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #9370db, #ba55d3, #9370db);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            background: linear-gradient(135deg, #9370db, #ba55d3, #9370db);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 30px rgba(147, 112, 219, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #ffffff;
+            text-align: left;
+            margin: 0 0 2rem;
+            font-weight: 500;
+            max-width: 800px;
+        }
+
+        .section {
+            margin-bottom: 4rem;
+            padding: 3rem;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(147, 112, 219, 0.2);
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            color: #9370db;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid rgba(147, 112, 219, 0.2);
+            padding-bottom: 1rem;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(147, 112, 219, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: #9370db;
+            box-shadow: 0 10px 30px rgba(147, 112, 219, 0.1);
+        }
+
+        .feature-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: #ba55d3;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: flex-start;
+            margin-top: 2rem;
+        }
+
+        .tech-tag {
+            padding: 0.5rem 1.2rem;
+            background: rgba(147, 112, 219, 0.1);
+            border: 1px solid rgba(147, 112, 219, 0.3);
+            border-radius: 20px;
+            color: #9370db;
+            font-family: 'JetBrains Mono', monospace !important;
+            font-size: 0.9rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: linear-gradient(135deg, #9370db, #ba55d3);
+            color: #000;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 700;
+            font-family: 'JetBrains Mono', monospace !important;
+            transition: all 0.3s ease;
+            margin: 0.5rem;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 20px rgba(147, 112, 219, 0.6);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #9370db;
+            color: #9370db;
+        }
+
+        .btn-outline:hover {
+            background: rgba(147, 112, 219, 0.1);
+            color: #fff;
+        }
+
+        code {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: 'JetBrains Mono', monospace !important;
+            color: #ff79c6;
+        }
+
+        pre {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 1.5rem;
+            border-radius: 10px;
+            overflow-x: auto;
+            margin: 1rem 0;
+            border: 1px solid rgba(147, 112, 219, 0.2);
+        }
+
+        pre code {
+            background: transparent;
+            padding: 0;
+            color: #f8f8f2;
+        }
+
+        @media (max-width: 768px) {
+            html {
+                font-size: 12px;
+            }
+
+            .navbar {
+                position: fixed !important;
+                top: 10px !important;
+                left: 50% !important;
+                right: auto !important;
+                transform: translateX(-50%) !important;
+                padding: 0.6rem 1.5rem !important;
+                width: calc(100% - 20px) !important;
+                max-width: calc(100vw - 20px) !important;
+                border-radius: 15px !important;
+                margin: 0 auto !important;
+            }
+
+            .navbar::before {
+                display: none !important;
+            }
+
+            .nav-links {
+                gap: 0.8rem !important;
+                flex-wrap: wrap !important;
+                justify-content: center !important;
+            }
+
+            .nav-links a {
+                font-size: 0.7rem !important;
+                padding: 0.4rem 0.5rem !important;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .container {
+                padding-top: 100px;
+            }
+        }
+
+        .footer {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: #ffffff;
+            font-size: 1rem;
+            border-top: 2px solid rgba(147, 112, 219, 0.3);
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            position: relative;
+            z-index: 10;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 500;
+            box-shadow: 0 -10px 30px rgba(147, 112, 219, 0.1);
+        }
+
+        .footer p {
+            margin: 0.5rem 0;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .social-links-section {
+            margin: 2rem 0;
+        }
+
+        .social-links-section h3 {
+            color: #da70d6;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+
+
+
+
+
+        .link-prefix {
+            color: #da70d6;
+            font-weight: 700;
+            opacity: 0.6;
+        }
+
+        .social-link:hover .link-prefix {
+            opacity: 1;
+        }
+
+
+        .social-link i {
+            font-size: 1.3rem;
+            color: #da70d6;
+            min-width: 24px;
+            text-align: center;
+        }
+
+        .social-link:hover i {
+            color: #ba55d3;
+            text-shadow: 0 0 10px rgba(186, 85, 211, 0.8);
+        }
+
+        .emoji-icon {
+            font-size: 1.3rem;
+            min-width: 24px;
+            text-align: center;
+        }
+
+
+
+
+        @media (max-width: 768px) {
+
+
+
+
+            .social-link i {
+                font-size: 1.1rem;
+            }
+        }
+
+
+
+        .footer p {
+            margin: 0.5rem 0;
+        }
+
+        .about-text {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            color: #ffffff;
+            max-width: 800px;
+            margin: 0 0 2rem;
+            font-weight: 500;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            letter-spacing: 0.5px;
+            text-align: left;
+        }
+
+        .footer-terminal {
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(147, 112, 219, 0.3);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .terminal-header {
+            background: rgba(147, 112, 219, 0.1);
+            padding: 0.8rem 1.2rem;
+            border-bottom: 1px solid rgba(147, 112, 219, 0.2);
+        }
+
+        .terminal-title {
+            color: #da70d6;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .terminal-body {
+            padding: 2.5rem 2rem;
+        }
+
+
+
+
+
+
+
+        .cmd-symbol {
+            color: #9370db;
+            font-weight: 700;
+        }
+
+        .social-link:hover .cmd-symbol {
+            color: #da70d6;
+        }
+
+
+
+        .footer-info p {
+            margin: 0.3rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .terminal-body {
+                padding: 2.5rem 2rem;
+            }
+
+
+
+
+        }
+
+        /* UI PANEL STYLES */
+        .ui-panel {
+            background: rgba(13, 2, 33, 0.7);
+            border: 1px solid rgba(147, 112, 219, 0.5);
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 4rem;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(20px);
+            position: relative;
+        }
+
+        .ui-panel-header {
+            background: rgba(147, 112, 219, 0.15);
+            padding: 0.8rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(147, 112, 219, 0.3);
+        }
+
+        .ui-title {
+            font-family: 'JetBrains Mono', monospace !important;
+            color: #da70d6;
+            font-weight: 700;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .ui-title::before {
+            content: '>';
+            color: #9370db;
+            animation: blink 1.5s infinite;
+        }
+
+        .ui-controls {
+            display: flex;
+            gap: 8px;
+        }
+
+        .ui-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(147, 112, 219, 0.3);
+        }
+
+        .ui-dot:nth-child(1) {
+            background: #ff5f56;
+        }
+
+        .ui-dot:nth-child(2) {
+            background: #ffbd2e;
+        }
+
+        .ui-dot:nth-child(3) {
+            background: #27c93f;
+        }
+
+        .ui-content {
+            padding: 3rem;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="particles"></div>
+
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="/my-portfolio-website/">Home</a></li>
+            <li><a href="/my-portfolio-website/about/">About</a></li>
+            <li><a href="/my-portfolio-website/blog/">Blog</a></li>
+            <li><a href="/my-portfolio-website/contact/">Contact</a></li>
+            <li><a href="/my-portfolio-website/projects/">Projects</a></li>
+            <li><a href="/my-portfolio-website/robocloud-hub/" class="active">RoboCloud</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section class="hero">
+            <h1>RoboCloud Hub</h1>
+            <p>The Complete Robotics Ecosystem. Learn robotics through curated tutorials, test your knowledge with
+                interactive quizzes, connect with experts and community, stay updated with research papers, explore job
+                opportunities—all in one powerful platform.</p>
+            <div>
+                <a href="https://robocloud-dashboard.vercel.app/" target="_blank" class="btn">Visit Live Platform</a>
+            </div>
+            <div class="hero-image">
+                <img src="../assets/robocloud_hub.png" alt="RoboCloud Hub Interface" loading="lazy">
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>The Vision</h2>
+            <p>In the rapidly evolving world of robotics, fragmentation is a major hurdle. Engineers struggle to find
+                specialized jobs, enthusiasts hunt for scattered news, learners lack structured resources, beginners
+                need guidance from experts, and makers need a unified marketplace for parts.
+                <strong>RoboCloud Hub</strong> is built to eliminate this fragmentation and create a comprehensive
+                robotics ecosystem.
+            </p>
+            <br>
+            <p>Our mission is ambitious yet clear: build the world's premier platform for <em>everyone</em> in
+                robotics—from curious beginners taking their first steps with Arduino, to researchers exploring
+                cutting-edge algorithms, to industry professionals at companies like Boston Dynamics and Tesla.
+                RoboCloud Hub provides everything you need to <strong>learn, practice, collaborate, and advance your
+                    robotics career</strong> in one unified, intuitive platform.</p>
+            <br>
+            <p><strong>Why RoboCloud Hub?</strong> Because the robotics community deserves a dedicated space that
+                combines learning resources, hands-on practice, real-time collaboration, career opportunities, and
+                expert guidance—all powered by modern technology and designed with user experience at its core.</p>
+        </section>
+
+        <section class="section">
+            <h2><i class="fas fa-graduation-cap"></i> Learn & Practice</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3><i class="fas fa-book"></i> Learn Robotics</h3>
+                    <p>Comprehensive learning paths covering ROS 2, Computer Vision, Reinforcement Learning, SLAM,
+                        Navigation, and more. Includes curated tutorials, open-source tools, free APIs, and career
+                        resources.</p>
+                </div>
+                <div class="feature-card">
+                    <h3><i class="fas fa-file-alt"></i> Research Hub</h3>
+                    <p>Stay updated with the latest robotics research papers and breakthroughs from arXiv, IEEE, and top
+                        conferences. Filter by topic and explore cutting-edge developments in AI and automation.</p>
+                </div>
+                <div class="feature-card">
+                    <h3><i class="fas fa-question-circle"></i> Interactive Quiz System</h3>
+                    <p>Test your knowledge with specialized quizzes across multiple categories: General Robotics,
+                        Software Robotics (ROS, SLAM, Navigation), Programming & Algorithms, Hardware & Electronics, and
+                        Math & Control Theory. Features a competitive leaderboard!</p>
+                </div>
+                <div class="feature-card">
+                    <h3><i class="fas fa-gamepad"></i> Robot Control Panel</h3>
+                    <p>Teleoperation interface for controlling robots remotely. Features manual controls, simulated
+                        telemetry, and real-time feedback for hands-on practice.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2><i class="fas fa-users"></i> Community & Collaboration</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3><i class="fas fa-comments"></i> Community Hub</h3>
+                    <p>Connect with robotics enthusiasts worldwide through dedicated channels: #general for discussions,
+                        #ros-help for ROS support, #robotics-software for development, and #hardware for electronics.
+                        Features live chat, forums, and global feed.</p>
+                </div>
+                <div class="feature-card">
+                    <h3><i class="fas fa-user-tie"></i> Consult an Expert</h3>
+                    <p>Get personalized guidance from experienced robotics professionals. Connect with experts for
+                        mentorship, code reviews, career advice, and technical problem-solving.</p>
+                </div>
+                <div class="feature-card">
+                    <h3><i class="fas fa-chart-line"></i> User Profiles & Gamification</h3>
+                    <p>Track your progress with levels, points, and achievements. Build your reputation in the community
+                        through quiz scores, contributions, and expertise sharing.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2><i class="fas fa-rocket"></i> Explore Opportunities</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3><i class="fas fa-briefcase"></i> Robotics Job Board</h3>
+                    <p>Find your dream job in robotics with powerful search filters for location, role, and keywords.
+                        Aggregates specialized robotics positions from top companies worldwide.</p>
+                </div>
+                <div class="feature-card">
+                    <h3><i class="fas fa-newspaper"></i> Latest News</h3>
+                    <p>Stay updated with robotics industry news, product launches, and breakthrough announcements.
+                        Curated from top tech sources and robotics publications.</p>
+                </div>
+                <div class="feature-card">
+                    <h3><i class="fas fa-shopping-cart"></i> Marketplace</h3>
+                    <p>Buy and sell robotics parts, sensors, kits, and components in a dedicated community marketplace.
+                        Connect with makers and find exactly what you need for your projects.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Technical Architecture</h2>
+            <p>RoboCloud Hub is a full-stack application built with modern web technologies, featuring real-time
+                communication, authentication, and scalable backend infrastructure.</p>
+            <div class="tech-stack">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Vite</span>
+                <span class="tech-tag">Tailwind CSS</span>
+                <span class="tech-tag">shadcn/ui</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Express</span>
+                <span class="tech-tag">Prisma</span>
+                <span class="tech-tag">SQLite</span>
+                <span class="tech-tag">Clerk Auth</span>
+                <span class="tech-tag">Vercel</span>
+            </div>
+        </section>
+
+
+    </div>
+
+    <script>
+        // Create floating particles
+        function createParticles() {
+            const particles = document.querySelector('.particles');
+            const colors = ['#9370db', '#ba55d3', '#9370db', '#2196f3'];
+
+            for (let i = 0; i < 30; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.width = particle.style.height = Math.random() * 4 + 1 + 'px';
+                particle.style.animationDuration = Math.random() * 20 + 10 + 's';
+                particle.style.animationDelay = Math.random() * 20 + 's';
+                particle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                particles.appendChild(particle);
+            }
+        }
+        createParticles();
+        // Create white stars/bubbles
+        for (let i = 0; i < 12; i++) {
+            const star = document.createElement('div');
+            star.className = 'white-star';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.width = Math.random() * 3 + 1 + 'px';
+            star.style.height = star.style.width;
+            star.style.animationDelay = Math.random() * 4 + 's';
+            star.style.animationDuration = Math.random() * 3 + 2 + 's';
+            document.body.appendChild(star);
+        }
+    </script>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-terminal">
+                <div class="terminal-header">
+                    <span class="terminal-title">darsh@connect:~$</span>
+                </div>
+                <div class="terminal-body">
+                    <div class="social-links-grid">
+                        <a href="https://darshmenon.github.io/" target="_blank" class="social-link"
+                            style="background: linear-gradient(135deg, #9333ea 0%, #4f46e5 100%); font-weight: bold;">
+                            <span class="cmd-symbol">$</span> ./new_portfolio
+                        </a>
+                        <a href="https://robocloud-dashboard.vercel.app" target="_blank" class="social-link">
+                            <span class="cmd-symbol">$</span> ./robocloud
+                        </a>
+                        <a href="https://github.com/darshmenon" target="_blank" class="social-link">
+                            <span class="cmd-symbol">$</span> ./github
+                        </a>
+                        <a href="https://linkedin.com/in/darsh-menon" target="_blank" class="social-link">
+                            <span class="cmd-symbol">$</span> ./linkedin
+                        </a>
+                        <a href="https://x.com/darsh_menon" target="_blank" class="social-link">
+                            <span class="cmd-symbol">$</span> ./x_main
+                        </a>
+                        <a href="https://x.com/Darsh_Menon_08" target="_blank" class="social-link">
+                            <span class="cmd-symbol">$</span> ./x_alt
+                        </a>
+                        <a href="https://medium.com/@darshmenon02" target="_blank" class="social-link">
+                            <span class="cmd-symbol">$</span> ./medium
+                        </a>
+                        <a href="https://www.youtube.com/@darshmenon0008" target="_blank" class="social-link">
+                            <span class="cmd-symbol">$</span> ./youtube
+                        </a>
+                        <a href="https://instagram.com/_.darshmenon._" target="_blank" class="social-link">
+                            <span class="cmd-symbol">$</span> ./instagram
+                        </a>
+                        <a href="https://open.spotify.com/user/31qiavd6dklz2jp5zvhmbl63eu74" target="_blank"
+                            class="social-link">
+                            <span class="cmd-symbol">$</span> ./spotify
+                        </a>
+                        <a href="https://facebook.com/darsh.menon.9" target="_blank" class="social-link">
+                            <span class="cmd-symbol">$</span> ./facebook
+                        </a>
+                        <a href="https://in.pinterest.com/darshmenon/" target="_blank" class="social-link">
+                            <span class="cmd-symbol">$</span> ./pinterest
+                        </a>
+                        <a href="https://www.chess.com/member/darshthegreat" target="_blank" class="social-link">
+                            <span class="cmd-symbol">$</span> ./chess
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-info">
+                <p>© 2025 Darsh Menon | Robotics Software Engineer | BITS Pilani | Asimov Robotics</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    </div>
+
+
+</body>
+
+</html>
