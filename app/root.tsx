@@ -135,3 +135,22 @@ export function Layout({ children }: { children: React.ReactNode }) {
 export default function App() {
   return <Outlet />;
 }
+
+export function ErrorBoundary({ error }: { error: Error }) {
+  return (
+    <html lang="en">
+      <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Error</title>
+      </head>
+      <body>
+        <div style={{ padding: "2rem", fontFamily: "system-ui, sans-serif" }}>
+          <h1>An error occurred</h1>
+          <p>{error.message}</p>
+          <a href="/" style={{ color: "blue", textDecoration: "underline" }}>Go back home</a>
+        </div>
+      </body>
+    </html>
+  );
+}
