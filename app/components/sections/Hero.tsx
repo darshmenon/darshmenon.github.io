@@ -1,4 +1,4 @@
-import { Link } from 'react-router';
+// import { Link } from 'react-router';
 import { motion } from 'framer-motion';
 
 export function Hero() {
@@ -36,18 +36,19 @@ export function Hero() {
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                        <Link
-                            to="/projects"
+
+                        <a
+                            href="/projects"
                             className="px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white rounded-full font-medium transition-all transform hover:scale-105 shadow-lg shadow-primary-600/25"
                         >
                             View My Work
-                        </Link>
-                        <Link
-                            to="/about"
+                        </a>
+                        <a
+                            href="/about"
                             className="px-8 py-4 bg-white/5 hover:bg-white/10 border border-white/10 text-white rounded-full font-medium transition-all backdrop-blur-sm"
                         >
                             About Me
-                        </Link>
+                        </a>
                         <a
                             href="https://linkedin.com/in/darsh-menon"
                             target="_blank"

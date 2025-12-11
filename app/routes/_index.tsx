@@ -3,7 +3,7 @@ import { Hero } from "~/components/sections/Hero";
 import { UIPanel } from "~/components/ui/UIPanel";
 import { projects } from "~/data/projects";
 import { skillCategories } from "~/data/skills";
-import { Link } from "react-router";
+// import { Link } from "react-router";
 
 export const meta: MetaFunction = () => {
     return [
@@ -315,12 +315,12 @@ export default function Index() {
                     </div>
 
                     <div className="mt-12 text-center">
-                        <Link
-                            to="/projects"
+                        <a
+                            href="/projects"
                             className="inline-flex items-center justify-center px-8 py-3 border border-white/10 rounded-full text-sm font-medium text-white hover:bg-white/5 transition-colors"
                         >
                             View All Projects
-                        </Link>
+                        </a>
                     </div>
                 </section>
 
@@ -335,34 +335,34 @@ export default function Index() {
                     </div>
 
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                        <Link
-                            to="/about"
+                        <a
+                            href="/about"
                             className="p-6 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl text-center transition-all hover:border-primary-500/50 group"
                         >
                             <h3 className="text-lg font-bold text-white group-hover:text-primary-400 mb-2">About Me</h3>
                             <p className="text-sm text-gray-400">Experience & Education</p>
-                        </Link>
-                        <Link
-                            to="/projects"
+                        </a>
+                        <a
+                            href="/projects"
                             className="p-6 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl text-center transition-all hover:border-primary-500/50 group"
                         >
                             <h3 className="text-lg font-bold text-white group-hover:text-primary-400 mb-2">Projects</h3>
                             <p className="text-sm text-gray-400">ROS 2 & Robotics Work</p>
-                        </Link>
-                        <Link
-                            to="/contact"
+                        </a>
+                        <a
+                            href="/contact"
                             className="p-6 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl text-center transition-all hover:border-primary-500/50 group"
                         >
                             <h3 className="text-lg font-bold text-white group-hover:text-primary-400 mb-2">Contact</h3>
                             <p className="text-sm text-gray-400">Get in Touch</p>
-                        </Link>
-                        <Link
-                            to="/robocloud-hub"
+                        </a>
+                        <a
+                            href="/robocloud-hub"
                             className="p-6 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl text-center transition-all hover:border-primary-500/50 group"
                         >
                             <h3 className="text-lg font-bold text-white group-hover:text-primary-400 mb-2">RoboCloud</h3>
                             <p className="text-sm text-gray-400">Robotics Learning Platform</p>
-                        </Link>
+                        </a>
                     </div>
                 </section>
             </div>
