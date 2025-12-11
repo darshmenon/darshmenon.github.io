@@ -138,19 +138,46 @@ export default function App() {
 }
 
 export function ErrorBoundary({ error }: { error: Error }) {
+  const isHydrationError = error.message.includes("hydration") || error.message.includes("patchRoutesOnNavigation") || error.message.includes("404");
+
   return (
     <html lang="en">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Error</title>
+        <title>Something went wrong</title>
+        <Meta />
+        <Links />
       </head>
-      <body>
-        <div style={{ padding: "2rem", fontFamily: "system-ui, sans-serif" }}>
-          <h1>An error occurred</h1>
-          <p>{error.message}</p>
-          <a href="/" style={{ color: "blue", textDecoration: "underline" }}>Go back home</a>
+      <body className="bg-tech-bg text-white antialiased flex items-center justify-center min-h-screen">
+        <div className="p-8 max-w-md text-center space-y-6">
+          <h1 className="text-3xl font-bold text-red-400">Oops!</h1>
+          <p className="text-gray-300">
+            {isHydrationError
+              ? "A new version of the site is available. Please reload."
+              : "Something unexpected happened. We're looking into it."}
+          </p>
+          {process.env.NODE_ENV === "development" && (
+            <pre className="text-xs text-left bg-black/50 p-4 rounded overflow-auto max-h-40 text-red-200">
+              {error.message}
+            </pre>
+          )}
+          <div className="flex gap-4 justify-center">
+            <button
+              onClick={() => window.location.reload()}
+              className="px-4 py-2 bg-primary-600 hover:bg-primary-700 rounded-lg transition-colors"
+            >
+              Reload Page
+            </button>
+            <a
+              href="/"
+              className="px-4 py-2 border border-white/20 hover:bg-white/10 rounded-lg transition-colors"
+            >
+              Go Home
+            </a>
+          </div>
         </div>
+        <Scripts />
       </body>
     </html>
   );
