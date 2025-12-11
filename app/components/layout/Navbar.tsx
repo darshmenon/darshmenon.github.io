@@ -1,4 +1,12 @@
-import { Link, useLocation } from 'react-router';
+// import { Link, useLocation } from "react-router";
+import { useLocation } from "react-router";
+
+// Temporary fix: Use standard <a> tags for reliable navigation
+const Link = ({ to, children, className, onClick }: any) => (
+    <a href={to} className={className} onClick={onClick}>
+        {children}
+    </a>
+);
 import { useState, useEffect } from 'react';
 import { cn } from '~/utils/cn';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
