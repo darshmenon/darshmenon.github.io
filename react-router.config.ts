@@ -11,6 +11,7 @@ export default {
       "/projects",
       "/contact",
       "/robocloud-hub",
+      "/sitemap.xml",
     ];
   },
 } satisfies Config;
