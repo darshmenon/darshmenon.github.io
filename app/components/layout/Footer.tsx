@@ -22,7 +22,7 @@ export function Footer() {
                         <ul className="space-y-2">
                             <li><a href="/about" className="text-gray-400 hover:text-primary-500 transition-colors">About</a></li>
                             <li><a href="/projects" className="text-gray-400 hover:text-primary-500 transition-colors">Projects</a></li>
-                            <li><a href="/blog" className="text-gray-400 hover:text-primary-500 transition-colors">Blog</a></li>
+                            <li><a href="https://robocloud-dashboard.vercel.app/blogs" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary-500 transition-colors">Blog</a></li>
                             <li><a href="/contact" className="text-gray-400 hover:text-primary-500 transition-colors">Contact</a></li>
                         </ul>
                     </div>
