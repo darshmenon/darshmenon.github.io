@@ -14,8 +14,7 @@ export const projects: Project[] = [
         title: "RoboCloud Hub",
         description: "A unified platform for the robotics ecosystem. Features comprehensive learning paths, community chat channels, job board, and a marketplace for parts. Built with React, Node.js, and Prisma.",
         tags: ["React", "Node.js", "Prisma", "PostgreSQL", "WebSockets"],
-        link: "https://robocloud-dashboard.vercel.app/",
-        github: "https://github.com/darshmenon/robocloud-hub"
+        link: "https://robocloud-dashboard.vercel.app/"
     },
     {
         id: "rl-bipedal-walking",
