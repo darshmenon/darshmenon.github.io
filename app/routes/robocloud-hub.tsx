@@ -152,7 +152,7 @@ export default function RoboCloudHub() {
                 {[
                     { label: "Interactive Experiences", value: "50+", Icon: RocketLaunchIcon },
                     { label: "Community", value: "10+", Icon: UsersIcon },
-                    { label: "Blogs", value: "20+", Icon: NewspaperIcon },
+                    { label: "Blogs", value: "100+", Icon: NewspaperIcon },
                     { label: "Quiz Questions", value: "1,000+", Icon: QuestionMarkCircleIcon }
                 ].map((stat) => (
                     <UIPanel key={stat.label} className="text-center">
