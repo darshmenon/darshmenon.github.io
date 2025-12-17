@@ -40,14 +40,14 @@ export const meta: MetaFunction = () => [
   { name: "geo.region", content: "IN-KL" },
   { name: "geo.placename", content: "Kochi, Kerala, India" },
   // Default Open Graph Image
-  { property: "og:image", content: "https://darshmenon.github.io/favicon.png" },
-  { property: "og:image:secure_url", content: "https://darshmenon.github.io/favicon.png" },
+  { property: "og:image", content: "https://darshmenon.github.io/assets/seo/home_preview.png" },
+  { property: "og:image:secure_url", content: "https://darshmenon.github.io/assets/seo/home_preview.png" },
   { property: "og:image:type", content: "image/png" },
   { property: "og:image:width", content: "1200" },
   { property: "og:image:height", content: "1200" },
   { property: "og:image:alt", content: "Darsh Menon - Robotics Software Engineer" },
   // Twitter Default Image
-  { name: "twitter:image", content: "https://darshmenon.github.io/favicon.png" },
+  { name: "twitter:image", content: "https://darshmenon.github.io/assets/seo/home_preview.png" },
   { name: "twitter:image:alt", content: "Darsh Menon - Robotics Software Engineer" },
 ];
 
