@@ -79,6 +79,21 @@ export default function Projects() {
                 {projects.map((project) => (
                     <UIPanel key={project.id} noPadding className="h-full flex flex-col">
                         <div className="p-8 flex-1">
+                            {project.image && (
+                                <div className="mb-6 -mx-8 -mt-8 rounded-t-xl overflow-hidden h-48 relative group/image">
+                                    <div className="absolute inset-0 bg-gradient-to-t from-[#09090b] to-transparent opacity-60" />
+                                    <img
+                                        src={project.image}
+                                        alt={project.title}
+                                        className="w-full h-full object-cover transform group-hover/image:scale-105 transition-transform duration-500"
+                                    />
+                                    <div className="absolute top-4 right-4">
+                                        <div className="px-3 py-1 bg-black/50 backdrop-blur-md border border-white/10 rounded-full text-xs font-mono text-primary-300">
+                                            PROJECT
+                                        </div>
+                                    </div>
+                                </div>
+                            )}
                             <div className="flex justify-between items-start mb-4">
                                 <h3 className="text-2xl font-bold text-white">
                                     {project.title}

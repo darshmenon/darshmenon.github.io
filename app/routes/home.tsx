@@ -1,10 +1,12 @@
 import type { Route } from "./+types/home";
 import { Welcome } from "../welcome/welcome";
 
-export function meta({}: Route.MetaArgs) {
+export function meta({ }: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "Home | Darsh Menon" },
+    { name: "description", content: "Portfolio Home" },
+    { property: "og:image", content: "https://darshmenon.github.io/assets/seo/home_preview.png" },
+    { name: "twitter:image", content: "https://darshmenon.github.io/assets/seo/home_preview.png" },
   ];
 }
 

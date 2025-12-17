@@ -1,5 +1,14 @@
 import type { Route } from "./+types/not-found";
-import { Link } from "react-router";
+import { Link, type MetaFunction } from "react-router";
+
+export const meta: MetaFunction = () => {
+    return [
+        { title: "404 - Page Not Found | Darsh Menon" },
+        { name: "robots", content: "noindex" },
+        { property: "og:title", content: "Page Not Found" },
+        { property: "og:image", content: "https://darshmenon.github.io/assets/seo/404_preview.png" },
+    ];
+};
 
 export default function NotFound() {
     return (
