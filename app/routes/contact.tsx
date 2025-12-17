@@ -22,13 +22,15 @@ export const meta: MetaFunction = () => {
         { property: "og:image:width", content: "400" },
         { property: "og:image:height", content: "400" },
         { property: "og:image:alt", content: "Darsh Menon - Robotics Software Engineer" },
-        { property: "og:site_name", content: "Darsh Menon Portfolio" },
+        { property: "og:site_name", content: "Darsh Menon" },
         // Twitter Card
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:title", content: "Contact Darsh Menon | Robotics Engineer" },
         { name: "twitter:description", content: "Get in touch for robotics consulting, ROS 2 development, or project discussions." },
         { name: "twitter:image", content: "https://darshmenon.github.io/assets/seo/contact_preview.png" },
         { name: "twitter:image:alt", content: "Darsh Menon - Robotics Software Engineer" },
+        { name: "twitter:site", content: "@darsh_menon" },
+        { name: "twitter:creator", content: "@darsh_menon" },
         // Canonical
         { tagName: "link", rel: "canonical", href: "https://darshmenon.github.io/contact" },
     ];
@@ -98,6 +100,12 @@ export default function Contact() {
                                 "addressRegion": "Kerala",
                                 "addressCountry": "India"
                             }
+                        },
+                        "dateModified": "2025-12-18",
+                        "publisher": {
+                            "@type": "Person",
+                            "name": "Darsh Menon",
+                            "url": "https://darshmenon.github.io"
                         }
                     })
                 }}

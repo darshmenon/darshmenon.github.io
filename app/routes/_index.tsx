@@ -27,7 +27,7 @@ export const meta: MetaFunction = () => {
         { property: "og:image:width", content: "1200" },
         { property: "og:image:height", content: "1200" },
         { property: "og:image:alt", content: "Darsh Menon - Robotics Software Engineer" },
-        { property: "og:site_name", content: "Darsh Menon Portfolio" },
+        { property: "og:site_name", content: "Darsh Menon" },
         { property: "og:locale", content: "en_US" },
         // Twitter Card
         { name: "twitter:card", content: "summary_large_image" },
@@ -210,6 +210,12 @@ export default function Index() {
                         "url": "https://darshmenon.github.io/",
                         "description": "Portfolio of Darsh Menon, a Robotics Software Engineer specializing in ROS 2, Computer Vision, and Autonomous Navigation.",
                         "inLanguage": "en-US",
+                        "dateModified": "2025-12-18",
+                        "publisher": {
+                            "@type": "Person",
+                            "name": "Darsh Menon",
+                            "url": "https://darshmenon.github.io"
+                        },
                         "author": {
                             "@type": "Person",
                             "name": "Darsh Menon"

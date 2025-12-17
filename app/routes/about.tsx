@@ -22,13 +22,15 @@ export const meta: MetaFunction = () => {
         { property: "og:image:width", content: "400" },
         { property: "og:image:height", content: "400" },
         { property: "og:image:alt", content: "Darsh Menon - Robotics Software Engineer" },
-        { property: "og:site_name", content: "Darsh Menon Portfolio" },
+        { property: "og:site_name", content: "Darsh Menon" },
         // Twitter Card
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:title", content: "About Darsh Menon | Robotics Software Engineer" },
         { name: "twitter:description", content: "Robotics Software Engineer at Asimov Robotics. BITS Pilani graduate specializing in ROS 2, Computer Vision, and Autonomous Navigation." },
         { name: "twitter:image", content: "https://darshmenon.github.io/assets/seo/about_preview.png" },
         { name: "twitter:image:alt", content: "Darsh Menon - Robotics Software Engineer" },
+        { name: "twitter:site", content: "@darsh_menon" },
+        { name: "twitter:creator", content: "@darsh_menon" },
         // Canonical
         { tagName: "link", rel: "canonical", href: "https://darshmenon.github.io/about" },
     ];
@@ -147,7 +149,13 @@ export default function About() {
                             "https://linkedin.com/in/darsh-menon",
                             "https://medium.com/@darshmenon02"
                         ],
-                        "knowsAbout": ["ROS 2", "Computer Vision", "Autonomous Navigation", "Python", "C++", "Machine Learning"]
+                        "knowsAbout": ["ROS 2", "Computer Vision", "Autonomous Navigation", "Python", "C++", "Machine Learning"],
+                        "dateModified": "2025-12-18",
+                        "publisher": {
+                            "@type": "Person",
+                            "name": "Darsh Menon",
+                            "url": "https://darshmenon.github.io"
+                        }
                     })
                 }}
             />

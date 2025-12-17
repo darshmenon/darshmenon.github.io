@@ -3,7 +3,7 @@ import { Welcome } from "../welcome/welcome";
 
 export function meta({ }: Route.MetaArgs) {
   return [
-    { title: "Home | Darsh Menon" },
+    { title: "Home | Darsh Menon | Robotics Software Engineer | BITS Pilani" },
     { name: "description", content: "Portfolio Home" },
     { property: "og:image", content: "https://darshmenon.github.io/assets/seo/home_preview.png" },
     { name: "twitter:image", content: "https://darshmenon.github.io/assets/seo/home_preview.png" },

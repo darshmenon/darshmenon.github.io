@@ -21,13 +21,15 @@ export const meta: MetaFunction = () => {
         { property: "og:image:secure_url", content: "https://darshmenon.github.io/assets/seo/projects_preview_v2.png" },
         { property: "og:image:type", content: "image/png" },
         { property: "og:image:alt", content: "Robotics Projects Showcase" },
-        { property: "og:site_name", content: "Darsh Menon Portfolio" },
+        { property: "og:site_name", content: "Darsh Menon" },
         // Twitter Card
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:title", content: "Robotics Projects | Darsh Menon" },
         { name: "twitter:description", content: "Explore robotics projects: RoboCloud Hub, RL Bipedal Walking, autonomous navigation systems built with ROS 2." },
         { name: "twitter:image", content: "https://darshmenon.github.io/assets/seo/projects_preview_v2.png" },
         { name: "twitter:image:alt", content: "Bipedal Robot Reinforcement Learning Project" },
+        { name: "twitter:site", content: "@darsh_menon" },
+        { name: "twitter:creator", content: "@darsh_menon" },
         // Canonical
         { tagName: "link", rel: "canonical", href: "https://darshmenon.github.io/projects" },
     ];
@@ -49,13 +51,15 @@ export default function Projects() {
                             "@type": "Person",
                             "name": "Darsh Menon"
                         },
+                        "dateModified": "2025-12-18",
+                        "publisher": {
+                            "@type": "Person",
+                            "name": "Darsh Menon",
+                            "url": "https://darshmenon.github.io"
+                        },
                         "mainEntity": {
                             "@type": "ItemList",
                             "itemListElement": projects.map((project, index) => ({
-                                "@type": "SoftwareSourceCode",
-                                "position": index + 1,
-                                "name": project.title,
-                                "description": project.description,
                                 "codeRepository": project.github,
                                 "programmingLanguage": project.tags
                             }))

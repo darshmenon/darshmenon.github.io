@@ -34,6 +34,9 @@ export const meta: MetaFunction = () => {
         { name: "twitter:description", content: "A comprehensive robotics ecosystem platform featuring learning paths, community forums, and job board." },
         { name: "twitter:image", content: "https://darshmenon.github.io/assets/seo/robocloud_preview_v2.png" },
         { name: "twitter:image:alt", content: "RoboCloud Hub Dashboard Preview" },
+        { property: "og:site_name", content: "RoboCloud Hub" },
+        { name: "twitter:site", content: "@darsh_menon" },
+        { name: "twitter:creator", content: "@darsh_menon" },
     ];
 };
 
@@ -99,6 +102,12 @@ export default function RoboCloudHub() {
                             "@type": "Offer",
                             "price": "0",
                             "priceCurrency": "USD"
+                        },
+                        "dateModified": "2025-12-18",
+                        "publisher": {
+                            "@type": "Person",
+                            "name": "Darsh Menon",
+                            "url": "https://darshmenon.github.io"
                         }
                     })
                 }}
