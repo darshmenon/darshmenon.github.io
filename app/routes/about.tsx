@@ -18,7 +18,7 @@ export const meta: MetaFunction = () => {
         { property: "og:url", content: "https://darshmenon.github.io/about" },
         { property: "og:image", content: "https://darshmenon.github.io/assets/seo/about_preview.png" },
         { property: "og:image:secure_url", content: "https://darshmenon.github.io/assets/seo/about_preview.png" },
-        { property: "og:image:type", content: "image/jpeg" },
+        { property: "og:image:type", content: "image/png" },
         { property: "og:image:width", content: "400" },
         { property: "og:image:height", content: "400" },
         { property: "og:image:alt", content: "Darsh Menon - Robotics Software Engineer" },
